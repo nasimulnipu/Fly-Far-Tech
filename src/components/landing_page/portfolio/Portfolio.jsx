@@ -47,7 +47,7 @@ const Portfolio = () => {
                     <Tab sx={{color:'white'}} label='Mobile App Development' value='4'/>
                 </TabList>
             </Box>
-            <TabPanel value='1'>  <PhotoGrid/>  </TabPanel>
+            <TabPanel value='1'> <PhotoGrid/>  </TabPanel>
             <TabPanel value='2'> <PhotoGrid/> </TabPanel>
             <TabPanel value='3'> <PhotoGrid/> </TabPanel>
             <TabPanel value='4'> <PhotoGrid/> </TabPanel>
