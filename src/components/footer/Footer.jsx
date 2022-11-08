@@ -48,7 +48,7 @@ const Footer = () => {
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Web Applications</Typography>
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Mobile Applications</Typography>
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Travel API Soluations</Typography>
-        <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Maqnagement Softwares</Typography>
+        <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Management Softwares</Typography>
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>ERP Softwares</Typography>
     </Box>
     <Box sx={{

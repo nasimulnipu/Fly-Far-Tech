@@ -6,6 +6,7 @@ import Appbar from '../navbar/Appbar';
 
 import SearchIcon from '@mui/icons-material/Search';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const Blogs = () => {
@@ -17,13 +18,15 @@ const Blogs = () => {
   ];
 
   const renderCard= (card, index)=>{
+  
     return(
-      <Card sx={{ maxWidth: 348, background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '20px', mb:'40vh', mt:'10vh' }}>
+      <Card sx={{ maxWidth: 340, background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '20px', mb:'40vh', mt:'10vh' }}>
       <CardMedia
         component="img"
         height="auto"
         image={card.image}
         alt="green iguana"
+        sx={{ml:'4'}}
       />
       <CardContent>
       <Typography gutterBottom variant="span" sx={{ color: '#FCAF17' }}>
@@ -46,11 +49,19 @@ const Blogs = () => {
     )
   }
   return (
-    <Box sx={{ background: "rgb(14, 13, 38)", color: '#FFFFFF' }}>
+    <Box sx={{ background: "rgb(14, 13, 38)",color: '#FFFFFF' }}>
       <Appbar />
 
       <Box sx={{ padding: "50px 100px" }}>
-        <Typography variant='h3'>Latest Blogs !!</Typography>
+        <Typography variant='h3' > <Typewriter
+            words={['Latest Blogs !!']}
+            loop={4}
+            cursor
+            cursorStyle='_'
+            typeSpeed={80}
+            deleteSpeed={70}
+            delaySpeed={1000}
+          /> </Typography>
 
         <Grid container spacing={1}>
           <Grid item xs={6} direction='column'>
@@ -91,7 +102,7 @@ const Blogs = () => {
               <CardMedia
                 component='iframe'
                 title='test'
-                src='https://www.youtube.com/watch?v=yx-YHFZ4LPs'
+                src='https://www.youtube.com/watch?v=THL1OPn72vo'
                 sx={{ height: '340px' }}
               />
             </Card>

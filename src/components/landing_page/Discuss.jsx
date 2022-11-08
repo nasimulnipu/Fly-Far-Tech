@@ -5,6 +5,7 @@ const Discuss = () => {
   return (
     <Box sx={{ 
         background: "rgb(14, 13, 38)",
+        
         color: "#FFFFFF",
         display:'flex',
         alignItems:'center',
@@ -35,12 +36,32 @@ const Discuss = () => {
            
              
             }}>
-        <TextField sx={{backgroundColor:'GrayText'}} id="standard-basic" label="Name" variant="standard" />
-        <TextField sx={{backgroundColor:'GrayText'}}  id="standard-basic" label="Email" variant="standard" />
-        <TextField sx={{backgroundColor:'GrayText'}}  id="standard-basic" label="Phone" variant="standard" />
+        <TextField sx={{  mb: 1,
+          minWidth: "30%",
+          background: "#0d66b3",
+          backdropFilter: "blur",
+          borderRadius: "10px",
+          mr: 2,}} id="standard-basic" label="Name" variant="standard" />
+        <TextField sx={{   mb: 1,
+          minWidth: "30%",
+          background: "#0d66b3",
+          backdropFilter: "blur",
+          borderRadius: "10px",
+          mr: 2}}  id="standard-basic" label="Email" variant="standard" />
+        <TextField sx={{   mb: 1,
+          minWidth: "30%",
+          background: "#0d66b3",
+          backdropFilter: "blur",
+          borderRadius: "10px",
+          mr: 2}}  id="standard-basic" label="Phone" variant="standard" />
         
         </Box>
-        <TextField sx={{backgroundColor:'GrayText', width:'100%'}}  id="standard-basic" label="Tell us about your idea" variant="standard" />
+        <TextField sx={{   mb: 1,
+          minWidth: "98%",
+          background: "#0d66b3",
+          backdropFilter: "blur",
+          borderRadius: "10px",
+          mr: 2}}  id="standard-basic" label="Tell us about your idea" variant="standard" />
         <Button sx={{color:'#FCAF17',mt:'15px'}} >Send message</Button>
     </Box>
     </Box>

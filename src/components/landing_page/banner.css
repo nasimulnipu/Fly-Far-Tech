@@ -1,7 +1,30 @@
-.title{
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px white;
-    font-size: 100px !important;
-    margin-right: 50px;
+
+
+.char{
+    transform: translateY(-115px);
+    transition: transform .5s;
+   
+}
+
+
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+     margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    transition: transform .3s ease;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 1000;
+    
+} 
+
+.grow{
+    transform: scale(10);
+    background: #fff;
+    mix-blend-mode: difference;
+    border: none;
 }

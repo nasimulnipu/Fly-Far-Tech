@@ -7,6 +7,9 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Team from './components/team/Team';
 import Products from './components/products/Products';
 import Blogs from './components/blogs/Blogs';
+import Contact from './components/contact/Contact';
+import Service from './components/services/Service';
+
 
  
 
@@ -19,10 +22,8 @@ const App = () => {
         <Route path='/team' element={<Team/>}/>
         <Route path='/products' element={<Products/>}/>
         <Route path='/blogs' element={<Blogs/>}/>
-
-
-        
-        
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/services' element={<Service/>}/>
       </Routes>
       
     </Box>
