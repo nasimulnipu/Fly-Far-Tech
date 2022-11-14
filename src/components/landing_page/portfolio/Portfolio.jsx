@@ -6,11 +6,12 @@ import PhotoGrid from "./PhotoGrid";
 
 const Portfolio = () => {
     const[value , setValue]= useState('1')
-    const handleChange =(event: React.SyntheticEvent , newValue: string)=>{
+    const handleChange =(event, newValue)=>{
         setValue(newValue)
     }
   return (
     <Box sx={{ background: "rgb(14, 13, 38)", color:'#FFFFFF'}}>
+      <Box component= "img" src="/img/portfolioVector.png" sx={{position:'absolute', right:'0', top:'300px', zIndex:"1"}}/>
       <Box
         sx={{
           display: "flex",
@@ -38,7 +39,7 @@ const Portfolio = () => {
           This is what we did in each section.
         </Typography>
       </Box>
-        <TabContext value={value}  >
+        <TabContext value={value} >
             <Box >
                 <TabList aria-label="example" onChange={handleChange} centered   >
                     <Tab sx={{color:'white'}} label='UI/UX Design' value='1'/>

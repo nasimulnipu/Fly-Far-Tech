@@ -49,25 +49,21 @@ const Blogs = () => {
     )
   }
   return (
-    <Box sx={{ background: "rgb(14, 13, 38)",color: '#FFFFFF' }}>
+    <Box sx={{ background: "rgb(14, 13, 38)",color: '#FFFFFF', pt:"5rem" }}>
       <Appbar />
+           <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
+            {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/>
+            <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
+
 
       <Box sx={{ padding: "50px 100px" }}>
-        <Typography variant='h3' > <Typewriter
-            words={['Latest Blogs !!']}
-            loop={4}
-            cursor
-            cursorStyle='_'
-            typeSpeed={80}
-            deleteSpeed={70}
-            delaySpeed={1000}
-          /> </Typography>
+        <Typography variant='h4'sx={{  p:'1rem 0rem'}} > Latest Blogs !!</Typography>
 
-        <Grid container spacing={1}>
+        <Grid container spacing={5}>
           <Grid item xs={6} direction='column'>
             <SearchIcon sx={{ fill: "#FCAF17", pt: '35px', cursor: 'pointer' }} />
             <TextField id="filled-basic" label='Search blogs, topics and more' variant="filled" sx={{ background: 'white', width: '90%', m: '15px' }} />
-            <Card sx={{ maxWidth: '100%', ml: '38px', maxHeight: '258px', background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '10px', cursor:'pointer' }}>
+            <Card sx={{ maxWidth: '100%', ml: '38px', maxHeight: '258px', background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '10px', cursor:'pointer', position:'relative', zIndex:'3' }}>
               <Box sx={{ display: 'flex' }}>
                 <CardMedia
                   component="img"
@@ -98,13 +94,8 @@ const Blogs = () => {
 
           </Grid>
           <Grid item xs={6}>
-            <Card sx={{}}>
-              <CardMedia
-                component='iframe'
-                title='test'
-                src='https://www.youtube.com/watch?v=THL1OPn72vo'
-                sx={{ height: '340px' }}
-              />
+            <Card sx={{width:"35rem"}}>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7vQznLKEfBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Card>
           </Grid>
 
@@ -116,7 +107,7 @@ const Blogs = () => {
       </Box>
 
 
-      <Box sx={{display:'flex', alignItems:'center', justifyContent:'center', gap:3}}>
+      <Box sx={{display:'flex', alignItems:'center', justifyContent:'center', gap:3, position:'relative', zIndex:'3'}}>
         {cardInfo.map(renderCard)}
       </Box>
 

@@ -9,26 +9,22 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Products = () => {
     const [value, setValue] = useState('1')
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    const handleChange = (event, newValue) => {
         setValue(newValue)
     }
    
     return (
-        <Box>
+        <Box sx={{pt:"5rem"}}>
             <Appbar />
+            <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
+            {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/> */}
+            {/* <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
 
-            <Box sx={{ backgroundColor: "rgb(14, 13, 38)", padding: "50px 100px", color: '#FFFFFF' }}>
-                <Typography variant='h4'  > <Typewriter
-            words={['Our Complete Products!!']}
-            loop={4}
-            cursor
-            cursorStyle='_'
-            typeSpeed={80}
-            deleteSpeed={70}
-            delaySpeed={1000}
-          />   </Typography>
+            <Box sx={{ backgroundColor: "rgb(14, 13, 38)", padding: "50px 100px", color: '#FFFFFF', marginBottom:'10rem' }}>
+                <Typography variant='h4'>Our Complete Products!!</Typography>
                 <TabContext value={value} >
-                    <Box sx={{ pt: '20px' }} >
+                    <Box sx={{ pt: '5rem' }} >
+                    
                         <TabList aria-label="example" onChange={handleChange} centered   >
                             <Tab sx={{ color: 'white' }} label='All Products' value='1' />
                             <Tab sx={{ color: 'white' }} label='UI/UX Design' value='2' />
@@ -37,6 +33,7 @@ const Products = () => {
                             <Tab sx={{ color: 'white' }} label='Mobile App Development' value='5' />
                             <Tab sx={{ color: 'white' }} label='ERP Software' value='6' />
                         </TabList>
+                        
                     </Box>
                     <TabPanel value='1'> <Product_pic />  </TabPanel>
                     <TabPanel value='2'> <Product_pic /> </TabPanel>

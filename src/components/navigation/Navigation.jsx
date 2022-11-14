@@ -36,7 +36,8 @@ const Navigation = ({openDrawer,handleDrawerClose}) => {
           <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px', textDecoration:'none' }}> <Link to="/">Home</Link> </Typography> 
           <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px'}}> <Link to="/products">Products</Link>   </Typography>
           <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px'}}><Link to="/services"> Services</Link>  </Typography>
-          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px'}}><Link to="/blogs"> About Us </Link>  </Typography>
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px'}}> <Link to="/blogs"> Blogs </Link>  </Typography> 
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px'}}><Link to="/team"> About Us </Link>  </Typography>
           <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px'}}> <Link to="/contact"> Contact Us  </Link>  </Typography> 
           </ListItem>
          </List>

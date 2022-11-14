@@ -27,6 +27,7 @@ const Services = () => {
         padding: "20px",
       }}
     >
+        <Box component= "img" src="/img/serviceVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
       <Box
         sx={{
           paddingLeft: "80px",
@@ -61,7 +62,7 @@ const Services = () => {
         <Grid container spacing={5} sx={{ mt: "10px",mt:'20px'}}>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#FCAF17", borderRadius: "5px", color: "#0A254D",height:'320px',  }}
+              sx={{ minWidth: 275, background: "#FCAF17", borderRadius: "5px", color: "#0A254D",height:'320px', position:'relative', zIndex:'3'  }}
             >
               <ComputerIcon
                 sx={{
@@ -98,7 +99,7 @@ const Services = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px' }}
+              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px', position:'relative', zIndex:'3' }}
             >
               <PhoneAndroidIcon 
                 sx={{
@@ -133,7 +134,7 @@ const Services = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF", height:'320px' }}
+              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF", height:'320px', position:'relative', zIndex:'3' }}
             >
               <BrushIcon
                 sx={{
@@ -168,7 +169,7 @@ const Services = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px" , color: "#FFFFFF",height:'320px' }}
+              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px" , color: "#FFFFFF", height:'320px', position:'relative', zIndex:'3'}}
             >
               <AppRegistrationIcon
                 sx={{

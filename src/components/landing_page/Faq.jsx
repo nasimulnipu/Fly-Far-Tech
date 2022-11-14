@@ -15,6 +15,8 @@ const Faq = () => {
         gap: 5,
       }}
     >
+      
+      {/* <Box component= "img" src="/img/faqVector.png" sx={{position:'absolute'}}/> */}
       <Typography variant="h3" sx={{ textAlign: "center" }}>
         Frequently Asked Questions
       </Typography>

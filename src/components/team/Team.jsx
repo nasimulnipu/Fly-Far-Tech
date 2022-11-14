@@ -1,22 +1,27 @@
-import { Avatar, Box, Grid, Icon, Typography } from '@mui/material';
+import { Avatar, Box, Grid,  Typography } from '@mui/material';
 import React from 'react';
 import Footer from '../footer/Footer';
 import Appbar from '../navbar/Appbar';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Typewriter } from 'react-simple-typewriter';
 
 
 const Team = () => {
   return (
 
-    <Box>
+    <Box sx={{pt:"5rem"}}>
       <Appbar />
+      
+      <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
       <Box sx={{ backgroundColor: "rgb(14, 13, 38)", padding: "50px 100px", color: '#FFFFFF', overflowY: 'hidden' }}>
         <Box sx={{pt:'10px', pb:'20px'}}>
-        <Typography variant='h3'>Our Energetic Team !!</Typography>
+        <Typography variant='h4' sx={{ pb:'1rem'}}>Our Energetic Team !!
+          </Typography>
         <Typography variant='span'sx={{ color:'#4F76AE'}}>In any industry where the peoples behind a company are as important as the company itself. we love to show off the awesome people who are responsible for keeping our buisness booming</Typography>
         </Box>
+
       
 
         <Grid container spacing={2} >

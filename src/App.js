@@ -9,6 +9,7 @@ import Products from './components/products/Products';
 import Blogs from './components/blogs/Blogs';
 import Contact from './components/contact/Contact';
 import Service from './components/services/Service';
+import Banner from './components/landing_page/banner/Banner';
 
 
  
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/blogs' element={<Blogs/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/services' element={<Service/>}/>
+        
       </Routes>
       
     </Box>

@@ -12,6 +12,7 @@ const Discuss = () => {
         justifyContent:'center'
         
    }}>
+    {/* <Box component= "img" src="/img/discussVector.png" sx={{position:'absolute', left:'0', bottom:'0'}}/> */}
         <Box sx={{ 
          margin:'60px 0px',
          background:
@@ -22,6 +23,7 @@ const Discuss = () => {
        
          
     }}>
+      
         <Box>
            <Typography variant='h5' sx={{color:'#0061AF'}}>Discuss a project</Typography> 
            <Typography variant='span'>Request a development cost assment for your IT product</Typography>

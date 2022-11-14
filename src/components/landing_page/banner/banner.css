@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;  
+}
+body{
+    width: 100%;  
+    color: #333;
+    background: #0E0C23;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.cursor{
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+    transform-origin: 100% 100%;
+    overflow: hidden;
+    display: none;
+    z-index: 10;
+}
+.cursor.media-blend{
+    z-index: 100;
+    mix-blend-mode: exclusion;
+}
+.cursor.media-blend .video-1,
+.cursor.media-blend .video-2,
+.cursor.media-blend .video-3{
+    filter: invert(1);
+}
+
+.cursor .video-1, .video-2, .video-3{
+    width: 100%;
+    height: 100%;
+    display: none;
+    transform: scale(1.4);
+}
+.link-grow{
+    transform: scale(2.2);
+    
+    z-index: -10;
+}
+
+.header{
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem auto;  
+}
+
+.title{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin: 0rem auto;
+    font-size:6rem;
+    z-index: 11;
+}
+
+
+.title a{
+    height: 20vh;
+    text-decoration: none;
+    margin: 0rem 1rem;
+    font-weight: 600;
+    overflow: hidden;
+    color: transparent;
+    transition: color 0.3s, -webkit-text-stroke 0.3s;
+    -webkit-text-stroke: 0.8px #ffffff; 
+}
+
+.title a:hover{
+    color: #ffffff;
+    -webkit-text-stroke: 1px transparent;  
+}
+
+.title-1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.6rem;
+    width: 26rem;
+}
+
+.title-1 p{
+    font-size: 1.5rem; 
+    margin: 0 .8rem .8rem .8rem ;  
+    color: #ffffff
+}
+
+.title-link-grow{
+    border: none;
+    transform: scale(11);
+    background-size: cover;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.headerBlur{
+    position: absolute;
+    right: 0;
+}
+
+.title-2, .title-3 {
+    width: 26rem;
+}

@@ -24,8 +24,11 @@ import { Typewriter } from 'react-simple-typewriter'
 const Service = () => {
 
   return (
-   <Box>
+   <Box sx={{pt:"5rem"}}>
     <Appbar/>
+           <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
+            {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/>
+            <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
     <Box>
     <Box
       sx={{
@@ -38,6 +41,7 @@ const Service = () => {
       <Box
         sx={{
           paddingLeft: "80px",
+          mb:'5rem'
           
         }}
       >
@@ -47,18 +51,11 @@ const Service = () => {
          
         
         }} >Our Services</Typography>
-        <Typography variant="h3"sx={{
+        <Typography variant="h4"sx={{
           fontWeight:'400',
-          fontSize:'50px'
-        }}> <Typewriter
-        words={['We do everything, what you need!!']}
-        loop={4}
-        cursor
-        cursorStyle='_'
-        typeSpeed={80}
-        deleteSpeed={70}
-        delaySpeed={1000}
-      />  </Typography>
+          fontSize:'50px',
+          p:'1rem 0rem'
+        }}> We do everything, what you need!!</Typography>
         <Typography variant="span" sx={{
           fontWeight:'400',
           fontSize:'18px',
@@ -77,10 +74,10 @@ const Service = () => {
           <NavigateBeforeIcon />
           <NavigateNextIcon/>
         </Box>
-        <Grid container spacing={5} sx={{ mt: "10px",mt:'20px'}}>
+        <Grid container spacing={5} sx={{ mt: "6rem"}}>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background:"#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px' }}
+              sx={{ minWidth: 275, background:"#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px',position:'relative', zIndex:'3' }}
             >
               <ComputerIcon
                 sx={{
@@ -117,7 +114,7 @@ const Service = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px' }}
+              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px',position:'relative', zIndex:'3' }}
             >
               <PhoneAndroidIcon 
                 sx={{
@@ -187,7 +184,7 @@ const Service = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px" , color: "#FFFFFF",height:'320px' }}
+              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px" , color: "#FFFFFF",height:'320px'}}
             >
               <AppRegistrationIcon
                 sx={{

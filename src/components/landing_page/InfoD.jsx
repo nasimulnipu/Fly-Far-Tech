@@ -16,6 +16,7 @@ const InfoD = () => {
         
       }}
     >
+      <Box component= "img" src="/img/infoVector.png" sx={{position:'absolute', left:'0'}}/>
       <Box
         sx={{
           background:

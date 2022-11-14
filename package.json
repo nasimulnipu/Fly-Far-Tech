@@ -20,6 +20,7 @@
     "react-simple-typewriter": "^4.0.5",
     "split-type": "^0.3.3",
     "typewriter-effect": "^2.19.0",
+    "utils": "^0.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
