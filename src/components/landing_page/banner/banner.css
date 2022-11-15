@@ -12,7 +12,7 @@ body{
     display: none;
 }
 
-.cursor{
+/* .cursor{
     width: 2rem;
     height: 2rem;
     border: 2px solid #333;
@@ -41,7 +41,7 @@ body{
     height: 100%;
     display: none;
     transform: scale(1.4);
-}
+} */
 .link-grow{
     transform: scale(2.2);
     

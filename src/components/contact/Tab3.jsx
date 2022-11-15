@@ -1,81 +1,43 @@
 import React from "react";
 import { Box, Grid, TextField, Button } from "@mui/material";
+import Input from '@mui/material/Input';
 
 const Tab3 = () => {
+  const ariaLabel = {'aria-label' : 'input'}
   return (
     <Box>
-      <Grid container sx={{ maxWidth: "100%" }}>
+      <Grid container sx={{ maxWidth: "100%" }} >
         <Grid
           item
           xs={3}
-          sx={{
-            background: "#0d66b3",
-            backdropFilter: "blur",
-            borderRadius: "10px",
-            mr: 2,
-            pl: 2,
-            pb: 1,
-          }}
+          
         >
-          <TextField id="standard-basic" label="Name" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Name" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
           xs={3}
-          sx={{
-            background: "#0d66b3",
-            backdropFilter: "blur",
-            borderRadius: "10px",
-            mr: 2,
-            pl: 2,
-            pb: 1,
-          }}
+         
         >
-          <TextField id="standard-basic" label="Email" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"}} placeholder="Email" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
           xs={3}
-          sx={{
-            background: "#0d66b3",
-            backdropFilter: "blur",
-            borderRadius: "10px",
-            pl: 2,
-            pb: 1,
-          }}
+      
         >
-          <TextField id="standard-basic" label="Phone" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE" }} placeholder="Phone" inputProps={ariaLabel} />
         </Grid>
       </Grid>
       <Box
-        sx={{
-          maxWidth: "76%",
-          background: "#0d66b3",
-          backdropFilter: "blur",
-          borderRadius: "10px",
-          pl: 2,
-          pb: 1,
-          mt: 2,
-        }}
+      sx={{ mt:'130px'}}
       >
-        <TextField id="standard-basic" label="Subject" variant="standard" />
+       <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'80%'    }} placeholder="Subject" inputProps={ariaLabel} />
       </Box>
       <Box
-        sx={{
-          maxWidth: "76%",
-          background: "#0d66b3",
-          backdropFilter: "blur",
-          borderRadius: "10px",
-          pl: 2,
-          pb: 1,
-          mt: 2,
-        }}
+       
       >
-        <TextField
-          id="standard-basic"
-          label="Project Description"
-          variant="standard"
-        />
+        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'80%'  }} placeholder="Project Description" inputProps={ariaLabel} />
       </Box>
       <Box
         sx={{

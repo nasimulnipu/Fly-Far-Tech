@@ -42,10 +42,10 @@ const Portfolio = () => {
         <TabContext value={value} >
             <Box >
                 <TabList aria-label="example" onChange={handleChange} centered   >
-                    <Tab sx={{color:'white'}} label='UI/UX Design' value='1'/>
-                    <Tab sx={{color:'white'}}  label='Creative' value='2'/>
-                    <Tab sx={{color:'white'}}  label='Web Development' value='3'/>
-                    <Tab sx={{color:'white'}} label='Mobile App Development' value='4'/>
+                    <Tab sx={{color:'#4F76AE'}} label='UI/UX Design' value='1'/>
+                    <Tab sx={{color:'#4F76AE'}}  label='Creative' value='2'/>
+                    <Tab sx={{color:'#4F76AE'}}  label='Web Development' value='3'/>
+                    <Tab sx={{color:'#4F76AE'}} label='Mobile App Development' value='4'/>
                 </TabList>
             </Box>
             <TabPanel value='1'> <PhotoGrid/>  </TabPanel>
@@ -53,6 +53,19 @@ const Portfolio = () => {
             <TabPanel value='3'> <PhotoGrid/> </TabPanel>
             <TabPanel value='4'> <PhotoGrid/> </TabPanel>
         </TabContext>
+        <Box sx={{
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'center',
+            cursor: 'pointer',
+            color:'#FCAF17',
+            fontSize: 20,
+            fontWeight:500,
+            letterSpacing:'0.3rem',
+            mt:'25px',
+            ml:'40rem',
+            textTransform:'uppercase'
+        }}>Explore More</Box>
     </Box>
   );
 };

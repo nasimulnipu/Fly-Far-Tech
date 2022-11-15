@@ -8,107 +8,108 @@ const Faq = () => {
   return (
     <Box
       sx={{
-        background: "rgb(14, 13, 38)",
-        color: "#FFFFFF",
-        display: "flex",
-        flexDirection: "column",
-        gap: 5,
-      }}
+        width:'75%',
+        margin:'auto',
+        
+     }}
     >
       
       {/* <Box component= "img" src="/img/faqVector.png" sx={{position:'absolute'}}/> */}
-      <Typography variant="h3" sx={{ textAlign: "center" }}>
+      <Typography variant="h3" sx={{ textAlign: "center",color: "#FFFFFF", margin:'20px' }}>
         Frequently Asked Questions
       </Typography>
 
-      <Box
-        sx={{
-          display: "flex",
-          alignItems:'center',
-          justifyContent:'center',
-          margin: '10px 20px',
-          
-        
-        }}
+      <Grid container columnSpacing={4}
       >
-        <Grid item xs={6} sx={{ width: "80vh" }}>
+        <Grid item xs={6}>
           <Accordion
             sx={{
-              background: "rgb(14, 13, 38)",
-              color: "#FFFFFF",
-              fontWeight: "400",
+              background: "transparent",
+              color: "#ffff",
               fontSize: "16px",
-              mb:'5px'
+              mb:'40px',
+              height:"auto",
+              borderBottom:"1px solid #4F76AE" 
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE"}} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              style={{ margin:0, padding:0}}
             >
-              <Typography variant="span">
-                Can we hire FLYFARTECH with a design concept already developd or
-                buisness analysis conducted?{" "}
+              <Typography variant="span" width="97%" >
+                Can we hire FLYFAR<span style={{color:"#FCAF17"}}>TECH</span>  with a design concept already developd or
+                buisness analysis conducted?
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="span">
+
+            <AccordionDetails  style={{ margin:0, padding:0, width:"97%"}}>
+              <Typography variant="span" style={{color:"#FCAF17"}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <br/>
+          </Grid>
+          <Grid item xs={6}>
           <Accordion
             sx={{
-              background: "rgb(14, 13, 38)",
+              background: "transparent",
               color: "#FFFFFF",
-              fontWeight: "400",
               fontSize: "16px",
-              mb:'5px'
+              mb:'40px',
+              height:"auto",
+              borderBottom:"1px solid #4F76AE" ,
+
             }}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE" }} />}
               aria-controls="panel2a-content"
               id="panel2a-header"
+              style={{ margin:0, padding:0}}
             >
-              <Typography variant="span">
+              <Typography variant="span" width="97%">
                 What are the recurting costs of setting uo a team? once you
                 outsource your software development services to us, you are
                 free.
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="span">
+            <AccordionDetails  style={{ margin:0, padding:0, width:"97%"}}>
+              <Typography variant="span" style={{color:"#FCAF17"}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <br/>
+          </Grid>
+          <Grid item xs={6}>
           <Accordion
             sx={{
-              background: "rgb(14, 13, 38)",
+              background: "transparent",
               color: "#FFFFFF",
-              fontWeight: "400",
               fontSize: "16px",
-              mb:'5px'
+              mb:'40px',
+              height:"auto",
+              borderBottom:"1px solid #4F76AE" ,
+
             }}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              style={{ margin:0, padding:0}}
             >
-              <Typography variant="span">
+              <Typography variant="span" width="97%">
                 How do you ensure security and risk management of my product?
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="span">
+            <AccordionDetails  style={{ margin:0, padding:0, width:"97%"}}>
+              <Typography variant="span" style={{color:"#FCAF17"}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
@@ -116,85 +117,91 @@ const Faq = () => {
             </AccordionDetails>
           </Accordion>
         </Grid>
-
-        <Grid item xs={6} sx={{ width: "80vh" }}>
+        <Grid item xs={6} >
           <Accordion
             sx={{
-              background: "rgb(14, 13, 38)",
+              background: "transparent",
               color: "#FFFFFF",
-              fontWeight: "400",
               fontSize: "16px",
-              mb:'5px'
+              mb:'40px',
+              height:"auto",
+              borderBottom:"1px solid #4F76AE" ,
+             
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE",  }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              // style={{ margin:0, padding:0}}
             >
-              <Typography variant="span">
-                Do you work ata a fixed price rate? We have a limited budget,
-                for which we want to get a guaranted result. prescribed in the
-                contact. we can’t afford to pay more than we agreed.
+              <Typography variant="span" width="97%">
+              Do you work ata a fixed price rate? We have a limited budget, for which we want to get a guaranted result. 
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="span">
+            <AccordionDetails  style={{ margin:0, padding:0, width:"97%"}}>
+              <Typography variant="span" style={{color:"#FCAF17"}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <br/>
+          </Grid>
+          <Grid item xs={6} >
           <Accordion
             sx={{
-              background: "rgb(14, 13, 38)",
+              background: "transparent",
               color: "#FFFFFF",
-              fontWeight: "400",
               fontSize: "16px",
-              mb:'5px'
+              mb:'40px',
+              height:"auto",
+               borderBottom:"1px solid #4F76AE" ,
             }}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              style={{ margin:0, padding:0}}
             >
-              <Typography variant="span">
+              <Typography variant="span" width="97%">
                 Can I Contact you with an existing design or buisness analysis?
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="span">
+            <AccordionDetails  style={{ margin:0, padding:0, width:"97%"}}>
+              <Typography variant="span" style={{color:"#FCAF17"}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <br/>
+          </Grid>
+          <Grid item xs={6} >
           <Accordion
             sx={{
               background: "rgb(14, 13, 38)",
               color: "#FFFFFF",
-              fontWeight: "400",
               fontSize: "16px",
-              mb:'5px'
+              mb:'40px',
+              height:"auto",
+              borderBottom:"1px solid #4F76AE" ,
             }}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: "#4F76AE" }} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              style={{ margin:0, padding:0}}
             >
-              <Typography variant="span">
+              <Typography variant="span" width="97%">
                 Are you obligated to pay any cancellatioan fees if you decide to
                 stop your projects?
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="span">
+            <AccordionDetails  style={{ margin:0, padding:0, width:"97%"}}>
+              <Typography variant="span" style={{color:"#FCAF17"}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
                 eget.
@@ -202,7 +209,9 @@ const Faq = () => {
             </AccordionDetails>
           </Accordion>
         </Grid>
-      </Box>
+      </Grid>
+
+      {/* <Box border={}></Box> */}
     </Box>
   );
 };

@@ -35,11 +35,17 @@ const Services = () => {
       >
         <Typography variant="h5" sx={{
           fontWeight:'400',
-          fontSize:'29px'
+          fontSize:'29px',
+          fontFamily: 'Inter',
+          fontStyle: 'normal',
+          color:'#FFFFFF',       
         }} >Our Services</Typography>
         <Typography variant="h3" sx={{
           fontWeight:'400',
-          fontSize:'50px'
+          fontSize:'50px',
+          fontFamily: 'Inter',
+          fontStyle: 'normal',
+          color: '#FFFFFF',   
         }}>We do everything!!</Typography>
         <Typography variant="span" sx={{
           fontWeight:'400',
@@ -59,10 +65,10 @@ const Services = () => {
           <NavigateBeforeIcon />
           <NavigateNextIcon/>
         </Box>
-        <Grid container spacing={5} sx={{ mt: "10px",mt:'20px'}}>
+        <Grid container spacing={5} sx={{ mt: "10px",mt:'20px',minWidth: '334px', minHeight:'390px'}}>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#FCAF17", borderRadius: "5px", color: "#0A254D",height:'320px', position:'relative', zIndex:'3'  }}
+              sx={{ minWidth: '334px', background: "#FCAF17", borderRadius: "5px", color: "#0A254D", height:'350px', position:'relative', zIndex:'3'  }}
             >
               <ComputerIcon
                 sx={{
@@ -70,7 +76,8 @@ const Services = () => {
                   color: "#0A254D",
                   width: "70px",
                   height: "36px",
-                  mt: "10px",
+                  mt: "25px",
+                  mb:"30px",
                   borderRadius: "0px 10px 10px 0px",
                 
                   
@@ -90,7 +97,7 @@ const Services = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" sx={{color:'black',mt:'20px'}}>
+                <Button size="small" sx={{color:'black',mt:'20px', fontWeight:'500', fontSize:'15px'}}>
                   Explore More
                   <TrendingFlatIcon />
                 </Button>
@@ -99,7 +106,7 @@ const Services = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px', position:'relative', zIndex:'3' }}
+               sx={{ minWidth: '334px', background:"#0A254D", borderRadius: "5px", color: "#FFFFFF", height:'350px', position:'relative', zIndex:'3'  }}
             >
               <PhoneAndroidIcon 
                 sx={{
@@ -107,7 +114,8 @@ const Services = () => {
                   color: "#0A254D",
                   width: "70px",
                   height: "36px",
-                  mt: "10px",
+                  mt: "25px",
+                  mb:"30px",
                   borderRadius: "0px 10px 10px 0px",
                 }}
               />
@@ -125,7 +133,7 @@ const Services = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" sx={{color:'#FCAF17', mt:'20px'}}>
+                <Button size="small" sx={{color:'#FCAF17', mt:'20px', fontWeight:'500', fontSize:'15px'}}>
                   Explore More
                   <TrendingFlatIcon />
                 </Button>
@@ -134,7 +142,7 @@ const Services = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px", color: "#FFFFFF", height:'320px', position:'relative', zIndex:'3' }}
+               sx={{ minWidth: '334px', background:"#0A254D", borderRadius: "5px", color: "#FFFFFF", height:'350px', position:'relative', zIndex:'3'  }}
             >
               <BrushIcon
                 sx={{
@@ -142,7 +150,8 @@ const Services = () => {
                   color: "#0A254D",
                   width: "70px",
                   height: "36px",
-                  mt: "10px",
+                  mt: "25px",
+                  mb:"30px",
                   borderRadius: "0px 10px 10px 0px",
                 }}
               />
@@ -160,7 +169,7 @@ const Services = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" sx={{color:'#FCAF17',mt:'20px'}}>
+                <Button size="small" sx={{color:'#FCAF17',mt:'20px', fontWeight:'500', fontSize:'15px'}}>
                   Explore More
                   <TrendingFlatIcon />
                 </Button>
@@ -169,7 +178,7 @@ const Services = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              sx={{ minWidth: 275, background: "#0A254D", borderRadius: "5px" , color: "#FFFFFF", height:'320px', position:'relative', zIndex:'3'}}
+            sx={{ minWidth: '334px', background:"#0A254D", borderRadius: "5px", color: "#FFFFFF", height:'350px', position:'relative', zIndex:'3'  }}
             >
               <AppRegistrationIcon
                 sx={{
@@ -177,7 +186,8 @@ const Services = () => {
                   color: "#0A254D",
                   width: "70px",
                   height: "36px",
-                  mt: "10px",
+                  mt: "25px",
+                  mb:"30px",
                   borderRadius: "0px 10px 10px 0px",
                 }}
               />
@@ -195,7 +205,7 @@ const Services = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small"sx={{color:'#FCAF17',mt:'20px'}}>
+                <Button size="small"sx={{color:'#FCAF17',mt:'20px', fontWeight:'500', fontSize:'15px'}}>
                   Explore More
                   <TrendingFlatIcon />
                 </Button>
@@ -212,7 +222,8 @@ const Services = () => {
             fontSize: 20,
             fontWeight:500,
             letterSpacing:'0.3rem',
-            mt:'10px'
+            mt:'25px',
+            textTransform:'uppercase'
         }}>Explore More</Box>
       </Box>
     </Box>

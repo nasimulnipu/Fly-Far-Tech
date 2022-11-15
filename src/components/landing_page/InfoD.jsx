@@ -41,16 +41,19 @@ const InfoD = () => {
         }}>
         <Box>
           <AccountTreeIcon />
+          <hr width='48px'color=" #0061AF"/>
           <Typography variant="h4">1780+</Typography>
           <Typography variant="span" sx={{color:'#FCAF17'}}>Completed Projects</Typography>
         </Box>
         <Box>
           <Person3Icon />
+          <hr width='48px'color=" #0061AF"/>
           <Typography variant="h4">850</Typography>
           <Typography variant="span" sx={{color:'#FCAF17'}}>World Wide Clients</Typography>
         </Box>
         <Box>
           <ApiIcon />
+          <hr width='48px'color=" #0061AF"/>
           <Typography variant="h4">50</Typography>
           <Typography variant="span" sx={{color:'#FCAF17'}}>Software Engineers</Typography>
         </Box>

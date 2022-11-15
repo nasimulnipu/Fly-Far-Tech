@@ -31,7 +31,7 @@ const Testimonial = () => {
         </Box>
         <Box sx={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', width:'50%', margin:'20px 0px', gap:1}}>
         
-            <Typography variant='span' sx={{mb:'15px', textAlign:'center',fontWeight:'300', fontSize:'18px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sunt repudiandae placeat nesciunt recusandae blanditiis sit deserunt optio ullam dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fugiat accusamus quisquam reprehenderit perspiciatis officiis similique maxime consequatur quis libero!</Typography>
+            <Typography variant='span' sx={{mb:'15px', textAlign:'center',fontWeight:'300', fontSize:'18px', color:"#FFFFFF"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sunt repudiandae placeat nesciunt recusandae blanditiis sit deserunt optio ullam dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fugiat accusamus quisquam reprehenderit perspiciatis officiis similique maxime consequatur quis libero!</Typography>
             
             <Avatar alt='avatar' src='img/avataaars.png' />
             <Typography>Syed Afridi</Typography>

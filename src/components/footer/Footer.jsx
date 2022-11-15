@@ -14,7 +14,7 @@ const Footer = () => {
         
    }}>
      <Box sx={{
-        margin:'20px 150px',
+        margin:'40px 150px',
      }}>
      <Link href='#'>
    <img src="img/FLYFARTECH.png" alt="" />
@@ -26,24 +26,24 @@ const Footer = () => {
     flexDirection:'row',
     alignItems:'flex-start',
     justifyContent:'space-between',
-    mt:'10px',
+    mt:'20px',
     }}>
         
     <Box sx={{
           display:'flex',
           flexDirection:'column',
-          gap:1,
+          gap:2,
     }}>
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'17px',color:'#4F76AE'}}>Contact Us</Typography>
         <Typography variant='span'  sx={{fontWeight:'400',fontSize:'15px'}} >+880 138414454145</Typography>
         <Typography variant='span' sx={{fontWeight:'400',fontSize:'15px'}}>info@flyfartech</Typography>
-        <Typography variant='span' sx={{fontWeight:'400',fontSize:'15px'}}>Ka 11/2A, Bashundhora R/A Road, Jagannathpur, Dhaka 1229.</Typography>
+        <Typography variant='span' sx={{fontWeight:'400',fontSize:'15px',width:'250px'}}>Ka 11/2A, Bashundhora R/A Road, Jagannathpur, Dhaka 1229.</Typography>
     </Box>
 
     <Box  sx={{
           display:'flex',
           flexDirection:'column',
-          gap:1,
+          gap:2,
     }}>
         <Typography variant='span'  sx={{fontWeight:'500',fontSize:'17px',color:'#4F76AE'}}>Product</Typography>
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Web Applications</Typography>
@@ -55,7 +55,7 @@ const Footer = () => {
     <Box sx={{
           display:'flex',
           flexDirection:'column',
-          gap:1,
+          gap:2,
     }}>
         <Typography variant='span'  sx={{fontWeight:'500',fontSize:'17px',color:'#4F76AE'}}>Resources</Typography>
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Blogs</Typography>
@@ -65,7 +65,7 @@ const Footer = () => {
     <Box sx={{
           display:'flex',
           flexDirection:'column',
-          gap:1,
+          gap:2,
     }}>
         <Typography variant='span'  sx={{fontWeight:'500',fontSize:'17px',color:'#4F76AE'}}>Company</Typography>
         <Typography variant='span' sx={{fontWeight:'500',fontSize:'15px'}}>Who We Are</Typography>
@@ -75,8 +75,7 @@ const Footer = () => {
     </Box>
 
    </Box>
-   <br/>
-
+   <hr style={{margin: '40px'}}  color= "#FCAF17" />
    <Box sx={{
     display:'flex',
     flexDirection:'row',
@@ -84,14 +83,16 @@ const Footer = () => {
     justifyContent:'space-between',
     mt:'20px',
    }}>
+    
+   
       <Typography variant='span' sx={{fontWeight:'400',fontSize:'18px'}}>© All Rights Reserved by FLYFARTECH</Typography>
       <Typography variant='span' sx={{fontWeight:'400',fontSize:'18px'}}>Privacy Policy</Typography>
       <Typography variant='span' sx={{fontWeight:'400',fontSize:'18px'}}>Terms of use</Typography>
       <Box sx={{
         color:'#FCAF17'
       }}>
-      <FacebookIcon/>
-      <GitHubIcon/>
+      <FacebookIcon sx={{mr:'5px'}}/>
+      <GitHubIcon sx={{mr:'5px'}}/>
       <LinkedInIcon/>
       </Box>
     

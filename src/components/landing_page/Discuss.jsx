@@ -1,7 +1,9 @@
-import { Box, Button, TextField, Typography } from '@mui/material'
+import { Box, Button, TextField, Typography } from '@mui/material';
+import Input from '@mui/material/Input';
 import React from 'react'
 
 const Discuss = () => {
+  const ariaLabel = {'aria-label' : 'input'}
   return (
     <Box sx={{ 
         background: "rgb(14, 13, 38)",
@@ -9,6 +11,7 @@ const Discuss = () => {
         color: "#FFFFFF",
         display:'flex',
         alignItems:'center',
+        
         justifyContent:'center'
         
    }}>
@@ -20,13 +23,15 @@ const Discuss = () => {
          backdropFilter: "blur(50px)",
          padding: '20px',
          width:'60%',
+         display:'flex',
+         flexDirection:'column',
        
          
     }}>
       
         <Box>
-           <Typography variant='h5' sx={{color:'#0061AF'}}>Discuss a project</Typography> 
-           <Typography variant='span'>Request a development cost assment for your IT product</Typography>
+           <Typography variant='h5' sx={{color:'#0061AF',fontSize:'35px',fontWeight:'500',mb:'10px'}}>Discuss a project</Typography> 
+           <Typography variant='span'sx={{fontSize:'15px',fontWeight:'400'}}>Request a development cost assment for your IT product</Typography>
         </Box>
         <Box sx={{
             display:'flex',
@@ -38,34 +43,18 @@ const Discuss = () => {
            
              
             }}>
-        <TextField sx={{  mb: 1,
-          minWidth: "30%",
-          background: "#0d66b3",
-          backdropFilter: "blur",
-          borderRadius: "10px",
-          mr: 2,}} id="standard-basic" label="Name" variant="standard" />
-        <TextField sx={{   mb: 1,
-          minWidth: "30%",
-          background: "#0d66b3",
-          backdropFilter: "blur",
-          borderRadius: "10px",
-          mr: 2}}  id="standard-basic" label="Email" variant="standard" />
-        <TextField sx={{   mb: 1,
-          minWidth: "30%",
-          background: "#0d66b3",
-          backdropFilter: "blur",
-          borderRadius: "10px",
-          mr: 2}}  id="standard-basic" label="Phone" variant="standard" />
+       <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE" }} placeholder="Name" inputProps={ariaLabel} />
+       <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"}} placeholder="Email" inputProps={ariaLabel} />
+       <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"}} placeholder="Phone" inputProps={ariaLabel} />
+    
+       
         
         </Box>
-        <TextField sx={{   mb: 1,
-          minWidth: "98%",
-          background: "#0d66b3",
-          backdropFilter: "blur",
-          borderRadius: "10px",
-          mr: 2}}  id="standard-basic" label="Tell us about your idea" variant="standard" />
-        <Button sx={{color:'#FCAF17',mt:'15px'}} >Send message</Button>
+        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"}} placeholder="Tell us about your idea" inputProps={ariaLabel} />
+        <Button sx={{color:'#FCAF17',mt:'15px',display:'flex',  alignItems:'center', justifyContent:'flex-end'}} >Send message</Button>
+       
     </Box>
+   
     </Box>
     
   )
