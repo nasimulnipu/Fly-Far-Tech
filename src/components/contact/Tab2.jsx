@@ -94,7 +94,7 @@ const Tab2 = () => {
           minWidth: "35%",
           borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
-          borderRadius: "10px",
+         
         }}
       >
         <InputLabel
