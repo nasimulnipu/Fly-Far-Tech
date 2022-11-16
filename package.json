@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "gsap": "^3.11.3",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-material-ui-searchbar": "^1.0.4",
@@ -19,6 +20,7 @@
     "react-scripts": "5.0.1",
     "react-simple-typewriter": "^4.0.5",
     "split-type": "^0.3.3",
+    "swiper": "^8.4.4",
     "typewriter-effect": "^2.19.0",
     "utils": "^0.3.1",
     "web-vitals": "^2.1.4"

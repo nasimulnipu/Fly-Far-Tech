@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <Box>
     <Appbar/>
-    <Banner/>
+    {/* <Banner/> */}
     <Services/>
     <Portfolio/>
     <Testimonial/>

@@ -20,7 +20,7 @@ const Contact = () => {
     setValue(newValue);
   };
   return (
-    <Box sx={{pt:"5rem"}}>
+    <Box >
         <Appbar/>
        
         <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
@@ -35,9 +35,9 @@ const Contact = () => {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example"  >
-            <Tab sx={{color:'#FFFFFF'}} label="Pre Sales" value="1" />
-            <Tab  sx={{color:'#FFFFFF'}} label="Project Proposal" value="2" />
-            <Tab  sx={{color:'#FFFFFF'}} label="Other" value="3" />
+            <Tab sx={{color:'#4F76AE'}} label="Pre Sales" value="1" />
+            <Tab  sx={{color:'#4F76AE'}} label="Project Proposal" value="2" />
+            <Tab  sx={{color:'#4F76AE'}} label="Other" value="3" />
           </TabList>
         </Box>
         <TabPanel value="1">  <Tab1/> </TabPanel>

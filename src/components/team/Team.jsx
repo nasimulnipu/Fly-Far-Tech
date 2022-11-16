@@ -11,7 +11,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Team = () => {
   return (
 
-    <Box sx={{pt:"5rem"}}>
+    <Box >
       <Appbar />
       
       <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
@@ -75,7 +75,14 @@ const Team = () => {
 
         </Grid>
 
-
+           <Box sx={{borderLeft:'6px solid #4F76AE',
+              height: '600px',
+              position: 'absolute',
+              left: '50%',
+              mt:'2rem',
+              
+          
+          }}></Box>
 
         <Grid item xs={6}>
         <Box sx={{ display: 'flex', margin: '30px', gap: 3 }}>

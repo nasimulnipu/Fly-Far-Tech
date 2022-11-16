@@ -30,12 +30,12 @@ const Tab3 = () => {
         </Grid>
       </Grid>
       <Box
-      sx={{ mt:'130px'}}
+      sx={{ mt:'3rem'}}
       >
        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'80%'    }} placeholder="Subject" inputProps={ariaLabel} />
       </Box>
       <Box
-       
+       sx={{ mt:'3rem'}}
       >
         <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'80%'  }} placeholder="Project Description" inputProps={ariaLabel} />
       </Box>
@@ -47,7 +47,7 @@ const Tab3 = () => {
           justifyContent: "flex-end",
         }}
       >
-        <Button variant="text" sx={{ color: "#FCAF17", mt: 2 }}>
+        <Button variant="text" sx={{ color: "#FCAF17", mt:"2rem" }}>
           Submit Query
         </Button>
       </Box>

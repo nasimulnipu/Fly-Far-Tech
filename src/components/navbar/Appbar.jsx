@@ -20,9 +20,10 @@ const Appbar = () => {
           <Link href='/' sx={{
             marginTop: "20px",
             flexGrow: 1,
-            cursor:"pointer"
+            cursor:'pointer'
           }}>
             <img src="img/FLYFARTECH.png" alt="" />
+           
           </Link>
 
 

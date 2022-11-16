@@ -20,13 +20,13 @@ const Blogs = () => {
   const renderCard= (card, index)=>{
   
     return(
-      <Card sx={{ maxWidth: 340, background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '20px', mb:'40vh', mt:'10vh' }}>
+      <Card sx={{ maxWidth: 340, background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '20px', mb:'25vh', mt:'10vh' }}>
       <CardMedia
         component="img"
-        height="auto"
+        height='200'
         image={card.image}
         alt="green iguana"
-        sx={{ml:'4'}}
+        
       />
       <CardContent>
       <Typography gutterBottom variant="span" sx={{ color: '#FCAF17' }}>
@@ -39,8 +39,8 @@ const Blogs = () => {
                     {card.desc}
                   </Typography>
                   <CardActions>
-                    <RemoveRedEyeIcon />
-                    <Button size="small" sx={{ color: '#4F76AE' }}>100 reads</Button>
+                    <RemoveRedEyeIcon sx={{ color: '#FCAF17' }} />
+                    <Button size="small" sx={{ color: '#FCAF17' }}>100 reads</Button>
                   </CardActions>
       </CardContent>
       
@@ -49,7 +49,7 @@ const Blogs = () => {
     )
   }
   return (
-    <Box sx={{ background: "rgb(14, 13, 38)",color: '#FFFFFF', pt:"5rem" }}>
+    <Box sx={{ background: "rgb(14, 13, 38)",color: '#FFFFFF' }}>
       <Appbar />
            <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
             {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/>
@@ -60,7 +60,7 @@ const Blogs = () => {
         <Typography variant='h4'sx={{  p:'1rem 0rem'}} > Latest Blogs !!</Typography>
 
         <Grid container spacing={5}>
-          <Grid item xs={6} direction='column'>
+          <Grid item xs={7.5} direction='column'>
             <SearchIcon sx={{ fill: "#FCAF17", pt: '35px', cursor: 'pointer' }} />
             <TextField id="filled-basic" label='Search blogs, topics and more' variant="filled" sx={{ background: 'white', width: '90%', m: '15px' }} />
             <Card sx={{ maxWidth: '100%', ml: '38px', maxHeight: '258px', background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '10px', cursor:'pointer', position:'relative', zIndex:'3' }}>
@@ -93,8 +93,8 @@ const Blogs = () => {
             </Card>
 
           </Grid>
-          <Grid item xs={6}>
-            <Card sx={{width:"35rem"}}>
+          <Grid item xs={4.5}>
+            <Card sx={{width:"35rem", mt:'1.5rem'}}>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7vQznLKEfBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Card>
           </Grid>

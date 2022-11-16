@@ -1,4 +1,5 @@
 import React from "react";
+import Input from '@mui/material/Input';
 import {
   Box,
   FormControl,
@@ -11,6 +12,7 @@ import {
 } from "@mui/material";
 
 const Tab1 = () => {
+  const ariaLabel = {'aria-label' : 'input'}
   const [catagories, setcatagories] = React.useState("");
 
   const handleChange = (event) => {
@@ -21,15 +23,15 @@ const Tab1 = () => {
       <FormControl
         variant="standard"
         sx={{
-          mb: 1,
+         
           minWidth: "40%",
-          background: "#0d66b3",
+          borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
           borderRadius: "10px",
         }}
       >
         <InputLabel
-          sx={{ color: "black", pl: 2 }}
+          sx={{ color:'#C7C7C7', ml:'8px'}}
           id="demo-simple-select-standard-label"
         >
           
@@ -51,65 +53,57 @@ const Tab1 = () => {
         </Select>
       </FormControl>
 
-      <Grid container sx={{ maxWidth: "100%" }}>
+      <Grid container sx={{ maxWidth: "100%", mt:'3rem' }}>
         <Grid
           item
           xs={3}
           sx={{
-            background:"#0d66b3",
+            backgroundColor: "transparent",
             backdropFilter: "blur",
             borderRadius: "10px",
-            mr: 2,
-            pl: 2,
-            pb: 1,
-          }}
+             }}
         >
-          <TextField id="standard-basic" label="Name" variant="standard" />
+            <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Name" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
           xs={3}
           sx={{
-            background: "#0d66b3",
+            backgroundColor: "transparent",
             backdropFilter: "blur",
             borderRadius: "10px",
-            mr: 2,
-            pl: 2,
-            pb: 1,
+           
           }}
         >
-          <TextField id="standard-basic" label="Email" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Email" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
           xs={3}
           sx={{
-            background: "#0d66b3",
+            backgroundColor: "transparent",
             backdropFilter: "blur",
             borderRadius: "10px",
             pl: 2,
             pb: 1,
+            
           }}
         >
-          <TextField id="standard-basic" label="Phone" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Phone" inputProps={ariaLabel} />
         </Grid>
       </Grid>
       <Box
         sx={{
           maxWidth: "76%",
-          background: "#0d66b3",
+          backgroundColor: "transparent",
           backdropFilter: "blur",
           borderRadius: "10px",
-          pl: 2,
-          pb: 1,
-          mt: 2,
+          borderBottom:"1px solid #4F76AE",
+       
+          mt:'3rem'
         }}
       >
-        <TextField
-          id="standard-basic"
-          label="Tell us about your idea"
-          variant="standard"
-        />
+       <Input sx={{color:'#C7C7C7',  width: '90%',ml: 2 }} placeholder="Tell us about your Idea" inputProps={ariaLabel} />
       </Box>
       <Box
         sx={{
@@ -117,6 +111,7 @@ const Tab1 = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-end",
+          mt:'3rem'
         }}
       >
         <Button variant="text" sx={{ color: "#FCAF17", mt: 2 }}>

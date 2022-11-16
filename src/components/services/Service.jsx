@@ -24,7 +24,7 @@ import { Typewriter } from 'react-simple-typewriter'
 const Service = () => {
 
   return (
-   <Box sx={{pt:"5rem"}}>
+   <Box >
     <Appbar/>
            <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
             {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/>
@@ -33,7 +33,8 @@ const Service = () => {
     <Box
       sx={{
         backgroundColor: "rgb(14, 13, 38)",
-
+        margin : "40px",
+        ml:'10px',
         color: "#FFFFFF",
         padding: "20px",
       }}
@@ -41,7 +42,7 @@ const Service = () => {
       <Box
         sx={{
           paddingLeft: "80px",
-          mb:'5rem'
+          mb:'3rem'
           
         }}
       >
@@ -68,13 +69,13 @@ const Service = () => {
             alignItems:'flex-end',
             justifyContent:'end',
             cursor: 'pointer',
-            gap:10,
+            gap: 4,
             
         }}>
-          <NavigateBeforeIcon />
+          <NavigateBeforeIcon/>
           <NavigateNextIcon/>
         </Box>
-        <Grid container spacing={5} sx={{ mt: "6rem"}}>
+        <Grid container spacing={4} sx={{ mt: "2rem", mr:'2rem'}}>
           <Grid item xs={3}>
             <Card
               sx={{ minWidth: 275, background:"#0A254D", borderRadius: "5px", color: "#FFFFFF",height:'320px',position:'relative', zIndex:'3' }}

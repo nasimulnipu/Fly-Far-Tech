@@ -1,4 +1,5 @@
 import React from "react";
+import Input from '@mui/material/Input';
 import {
   Box,
   FormControl,
@@ -11,9 +12,10 @@ import {
 } from "@mui/material";
 
 const Tab2 = () => {
+  const ariaLabel = {'aria-label' : 'input'}
   const [catagories, setcatagories] = React.useState("");
 
-  const handleChange = (event) => {
+  const handleChange1 = (event) => {
     setcatagories(event.target.value);
   };
   return (
@@ -23,14 +25,14 @@ const Tab2 = () => {
         sx={{
           mb: 1,
           minWidth: "35%",
-          background: "#0d66b3",
+          borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
           borderRadius: "10px",
           mr: 2,
         }}
       >
         <InputLabel
-          sx={{ color: "black", pl: 2 }}
+          sx={{ color:'#C7C7C7', pl: 2 }}
           id="demo-simple-select-standard-label"
         >
           
@@ -40,7 +42,7 @@ const Tab2 = () => {
           // labelId="demo-simple-select-standard-label"
           // id="demo-simple-select-standard"
           value={catagories}
-          onChange={handleChange}
+          onChange={handleChange1}
           label="Catagories"
           
         >
@@ -57,13 +59,13 @@ const Tab2 = () => {
         sx={{
           mb: 1,
           minWidth: "35%",
-          background: "#0d66b3",
+          borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
           borderRadius: "10px",
         }}
       >
         <InputLabel
-          sx={{ color: "black", pl: 2 }}
+          sx={{ color:'#C7C7C7', pl: 2 }}
           id="demo-simple-select-standard-label"
         >
           
@@ -73,7 +75,7 @@ const Tab2 = () => {
           // labelId="demo-simple-select-standard-label"
           // id="demo-simple-select-standard"
           value={catagories}
-          onChange={handleChange}
+          onChange={handleChange1}
           label="Catagories"
         >
           <MenuItem value="">
@@ -90,13 +92,13 @@ const Tab2 = () => {
         sx={{
           mb: 1,
           minWidth: "35%",
-          background: "#0d66b3",
+          borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
           borderRadius: "10px",
         }}
       >
         <InputLabel
-          sx={{ color: "black", pl: 2 }}
+          sx={{ color:'#C7C7C7', pl: 2 }}
           id="demo-simple-select-standard-label"
         >
           
@@ -106,7 +108,7 @@ const Tab2 = () => {
           // labelId="demo-simple-select-standard-label"
           // id="demo-simple-select-standard"
           value={catagories}
-          onChange={handleChange}
+          onChange={handleChange1}
           label="Catagories"
         >
           <MenuItem value="">
@@ -117,53 +119,53 @@ const Tab2 = () => {
           <MenuItem value={30}>ERP Software</MenuItem>
         </Select>
       </FormControl> 
-      <Grid container sx={{ maxWidth: "100%" }}>
+      <Grid container sx={{ maxWidth: "100%",mt:'3rem' }}>
         <Grid
           item
           xs={3}
           sx={{
-            background: "#0d66b3",
+            backgroundColor: "transparent",
             backdropFilter: "blur",
             borderRadius: "10px",
-            mr: 2,
+            
             pl: 2,
             pb: 1,
           }}
         >
-          <TextField id="standard-basic" label="Name" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Name" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
           xs={3}
           sx={{
-            background: "#0d66b3",
+            backgroundColor: "transparent",
             backdropFilter: "blur",
             borderRadius: "10px",
-            mr: 2,
+            
             pl: 2,
             pb: 1,
           }}
         >
-          <TextField id="standard-basic" label="Email" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Email" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
           xs={3}
           sx={{
-            background: "#0d66b3",
+            backgroundColor: "transparent",
             backdropFilter: "blur",
             borderRadius: "10px",
             pl: 2,
             pb: 1,
           }}
         >
-          <TextField id="standard-basic" label="Phone" variant="standard" />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Phone" inputProps={ariaLabel} />
         </Grid>
       </Grid>
       <Box
         sx={{
-          maxWidth: "76%",
-          background: "#0d66b3",
+          maxWidth: "90%",
+          backgroundColor: "transparent",
           backdropFilter: "blur",
           borderRadius: "10px",
           pl: 2,
@@ -171,11 +173,7 @@ const Tab2 = () => {
           mt: 2,
         }}
       >
-        <TextField
-          id="standard-basic"
-          label="Project Description"
-          variant="standard"
-        />
+        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'80%'  }} placeholder="Project Description" inputProps={ariaLabel} />
       </Box>
       <Box
         sx={{
