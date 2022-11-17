@@ -1,6 +1,7 @@
 import { Box, Drawer, List, ListItem, ListItemText, Typography } from '@mui/material';
 import React  from 'react';
 import { Link } from 'react-router-dom';
+import { style } from '@mui/material/styles';
 
 const Navigation = ({openDrawer,handleDrawerClose}) => {
   // console.log(openDrawer)
@@ -33,12 +34,12 @@ const Navigation = ({openDrawer,handleDrawerClose}) => {
       <List>
           <ListItem sx={{display:'flex', flexDirection:'column', alignItems:'flex-start', gap:2}}>
           <Typography sx={{fontFamily:'sans-serif', fontWeight:'400', fontSize:'20px'}}> Menu </Typography>  
-          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px', textDecoration:'none' }}> <Link  to="/">Home</Link> </Typography> 
-          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px', textDecoration:'none'}}> <Link to="/products">Products</Link>   </Typography>
-          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px', textDecoration:'none'}}><Link to="/services"> Services</Link>  </Typography>
-          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px', textDecoration:'none'}}> <Link to="/blogs"> Blogs </Link>  </Typography> 
-          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px', textDecoration:'none'}}><Link to="/team"> About Us </Link>  </Typography>
-          <Typography sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'50px', textDecoration:'none'}}> <Link to="/contact"> Contact Us  </Link>  </Typography> 
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'500', fontSize:'50px'  }}> <Link style={{textDecoration:'none',color:'black'}} to="/">Home</Link> </Typography> 
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'500', fontSize:'50px'}}> <Link style={{textDecoration:'none',color:'black'}} to="/products">Products</Link>   </Typography>
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'500', fontSize:'50px' }}><Link style={{textDecoration:'none',color:'black'}} to="/services"> Services</Link>  </Typography>
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'500', fontSize:'50px' }}> <Link style={{textDecoration:'none',color:'black'}} to="/blogs"> Blogs </Link>  </Typography> 
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'500', fontSize:'50px' }}><Link style={{textDecoration:'none',color:'black'}} to="/team"> About Us </Link>  </Typography>
+          <Typography sx={{fontFamily:'sans-serif', fontWeight:'500', fontSize:'50px'}}> <Link style={{textDecoration:'none',color:'black'}} to="/contact"> Contact Us  </Link>  </Typography> 
           </ListItem>
          </List>
 
@@ -52,7 +53,9 @@ const Navigation = ({openDrawer,handleDrawerClose}) => {
       <Typography sx={{ display:'flex', flexDirection:'column',fontFamily:'sans-serif', fontWeight:'400', fontSize:'20px'}}>
         Get In Touch
 
-        <a href='#' sx={{fontFamily:'sans-serif', fontWeight:'600', fontSize:'20px'}}>Info@flyfartech.com</a>
+        <a href='#' style={{
+          fontFamily:'sans-serif', fontWeight:'600', fontSize:'20px',textDecoration:'none',color:'black'
+        }}>Info@flyfartech.com</a>
         <br/>
       </Typography>
     </Box>

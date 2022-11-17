@@ -38,7 +38,7 @@ const Testimonial = () => {
             <Typography variant='span' sx={{fontWeight:'400', fontSize:'18px', color: '#4F76AE'}}>CEO, XYZ Company</Typography>
             
             
-            <Box component= "img" src="/img/testimonialVector.png" sx={{position:'absolute', right:'0'}}/>
+            {/* <Box component= "img" src="/img/testimonialVector.png" sx={{position:'absolute', right:'0'}}/> */}
            
         </Box>
         <Box>

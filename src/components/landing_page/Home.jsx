@@ -11,6 +11,7 @@ import Portfolio from './portfolio/Portfolio';
 import Services from './Services';
 import Testimonial from './Testimonial';
 import Banner from './banner/Banner';
+import MouseScroll from '../MouseScroll';
 
 
 
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <Box>
     <Appbar/>
+    <MouseScroll/>
     {/* <Banner/> */}
     <Services/>
     <Portfolio/>

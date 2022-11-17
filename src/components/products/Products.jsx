@@ -5,6 +5,9 @@ import Footer from '../footer/Footer'
 import Appbar from '../navbar/Appbar'
 import Product_pic from './Product_pic'
 import { Typewriter } from 'react-simple-typewriter'
+import MouseIcon from '@mui/icons-material/Mouse';
+import MouseScroll from '../MouseScroll'
+import { style } from '@mui/material/styles';
 
 
 const Products = () => {
@@ -16,14 +19,15 @@ const Products = () => {
     return (
         <Box >
             <Appbar />
+           <MouseScroll/>
             <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
             {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/> */}
             {/* <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
 
             <Box sx={{ backgroundColor: "rgb(14, 13, 38)", padding: "50px 100px", color: '#FFFFFF', marginBottom:'10rem' }}>
-                <Typography variant='h4'>Our Complete Products!!</Typography>
+                <Typography variant='h4'>Our Completed Products!!</Typography>
                 <TabContext value={value} >
-                    <Box sx={{ pt: '5rem' }} >
+                    <Box sx={{ pt: '5rem'}} >
                     
                         <TabList aria-label="example" onChange={handleChange} centered   >
                             <Tab sx={{ color: 'white' }} label='All Products' value='1' />

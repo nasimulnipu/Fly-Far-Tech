@@ -1,72 +1,46 @@
-import { Box, Tab, Typography } from "@mui/material";
-import React from "react";
-import { TabContext, TabList, TabPanel } from '@mui/lab';
-import { useState } from "react";
-import PhotoGrid from "./PhotoGrid";
+import { TabContext, TabList, TabPanel } from '@mui/lab'
+import { Box, Tab, Typography } from '@mui/material'
+import React, { useState } from 'react'
+import PhotoGrid from './PhotoGrid';
+
 
 const Portfolio = () => {
-    const[value , setValue]= useState('1')
-    const handleChange =(event, newValue)=>{
-        setValue(newValue)
+  const [value, setValue] = useState('1')
+  const handleChange = (event, newValue) => {
+      setValue(newValue)
     }
   return (
-    <Box sx={{ background: "rgb(14, 13, 38)", color:'#FFFFFF'}}>
-      <Box component= "img" src="/img/portfolioVector.png" sx={{position:'absolute', right:'0', top:'300px', zIndex:"1"}}/>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "rgb(14, 13, 38)",
-          color: "#FFFFFF",
-          margin:'30px 0px',
-        }}
-      >
-        <Typography variant="h5" sx={{
-          fontWeight:'400',
-          fontSize:'29px'
-        }}>Portfolio</Typography>
-        <Typography variant="h3" sx={{
-          fontWeight:'400',
-          fontSize:'50px'
-        }}>Our latest projects!!</Typography>
-        <Typography variant="span" sx={{
-          fontWeight:'400',
-          fontSize:'18px',
-          color:'#4F76AE'
-        }}>
-          This is what we did in each section.
-        </Typography>
-      </Box>
+    <Box >
+  
+    <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
+    {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/> */}
+    {/* <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
+
+    <Box sx={{ backgroundColor: "rgb(14, 13, 38)", padding: "50px 100px", color: '#FFFFFF', marginBottom:'10rem' }}>
+        <Typography variant='h4'>Our Complete Products!!</Typography>
         <TabContext value={value} >
-            <Box >
+            <Box sx={{ pt: '5rem' }} >
+            
                 <TabList aria-label="example" onChange={handleChange} centered   >
-                    <Tab sx={{color:'#4F76AE'}} label='UI/UX Design' value='1'/>
-                    <Tab sx={{color:'#4F76AE'}}  label='Creative' value='2'/>
-                    <Tab sx={{color:'#4F76AE'}}  label='Web Development' value='3'/>
-                    <Tab sx={{color:'#4F76AE'}} label='Mobile App Development' value='4'/>
+                    <Tab sx={{ color: 'white' }} label='All Products' value='1' />
+                    <Tab sx={{ color: 'white' }} label='UI/UX Design' value='2' />
+                    <Tab sx={{ color: 'white' }} label='Creative' value='3' />
+                    <Tab sx={{ color: 'white' }} label='Web Development' value='4' />
+                  
                 </TabList>
+                
             </Box>
-            <TabPanel value='1'> <PhotoGrid/>  </TabPanel>
-            <TabPanel value='2'> <PhotoGrid/> </TabPanel>
-            <TabPanel value='3'> <PhotoGrid/> </TabPanel>
-            <TabPanel value='4'> <PhotoGrid/> </TabPanel>
+            <TabPanel value='1'> <PhotoGrid />  </TabPanel>
+            <TabPanel value='2'> <PhotoGrid /> </TabPanel>
+            <TabPanel value='3'> <PhotoGrid /> </TabPanel>
+            <TabPanel value='4'> <PhotoGrid /> </TabPanel>
+           
         </TabContext>
-        <Box sx={{
-            display:'flex',
-            alignItems:'center',
-            justifyContent:'center',
-            cursor: 'pointer',
-            color:'#FCAF17',
-            fontSize: 20,
-            fontWeight:500,
-            letterSpacing:'0.3rem',
-            mt:'25px',
-            ml:'40rem',
-            textTransform:'uppercase'
-        }}>Explore More</Box>
+
     </Box>
+
+   
+</Box>
   );
 };
 

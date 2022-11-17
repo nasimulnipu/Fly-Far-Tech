@@ -7,12 +7,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Typewriter } from 'react-simple-typewriter';
 
+import MouseScroll from '../MouseScroll';
+
 
 const Team = () => {
   return (
 
     <Box >
       <Appbar />
+      <MouseScroll/>
       
       <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
       <Box sx={{ backgroundColor: "rgb(14, 13, 38)", padding: "50px 100px", color: '#FFFFFF', overflowY: 'hidden' }}>
@@ -20,7 +23,8 @@ const Team = () => {
         <Typography variant='h4' sx={{ pb:'1rem'}}>Our Energetic Team !!
           </Typography>
         <Typography variant='span'sx={{ color:'#4F76AE'}}>In any industry where the peoples behind a company are as important as the company itself. we love to show off the awesome people who are responsible for keeping our buisness booming</Typography>
-        </Box>
+        </Box>import MouseScroll from './../MouseScroll';
+
 
       
 
@@ -75,11 +79,12 @@ const Team = () => {
 
         </Grid>
 
-           <Box sx={{borderLeft:'6px solid #4F76AE',
+           <Box sx={{borderLeft:'1px solid #4F76AE',
               height: '600px',
               position: 'absolute',
               left: '50%',
               mt:'2rem',
+              
               
           
           }}></Box>

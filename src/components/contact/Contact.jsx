@@ -10,6 +10,8 @@ import Tab2 from './Tab2'
 import Tab3 from './Tab3'
 import { Typography } from '@mui/material';
 
+import MouseScroll from '../MouseScroll'
+
 
 
 const Contact = () => {
@@ -22,8 +24,8 @@ const Contact = () => {
   return (
     <Box >
         <Appbar/>
-       
-        <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
+        <MouseScroll/>
+        {/* <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0', zIndex:'1'}}/> */}
             {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/>
             <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
         <Box sx={{ width: '100%', typography: 'body1', backgroundColor: "rgb(14, 13, 38)", padding: "5rem 7rem", color: '#FFFFFF' }}>

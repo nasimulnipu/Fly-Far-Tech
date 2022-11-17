@@ -27,7 +27,7 @@ const Tab1 = () => {
           minWidth: "40%",
           borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
-          borderRadius: "10px",
+         
         }}
       >
         <InputLabel
@@ -60,10 +60,10 @@ const Tab1 = () => {
           sx={{
             backgroundColor: "transparent",
             backdropFilter: "blur",
-            borderRadius: "10px",
+            
              }}
         >
-            <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Name" inputProps={ariaLabel} />
+            <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'90%'   }} placeholder="Name" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
@@ -75,7 +75,7 @@ const Tab1 = () => {
            
           }}
         >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Email" inputProps={ariaLabel} />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'100%'  }} placeholder="Email" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
@@ -89,7 +89,7 @@ const Tab1 = () => {
             
           }}
         >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Phone" inputProps={ariaLabel} />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'100%'  }} placeholder="Phone" inputProps={ariaLabel} />
         </Grid>
       </Grid>
       <Box
@@ -97,7 +97,6 @@ const Tab1 = () => {
           maxWidth: "76%",
           backgroundColor: "transparent",
           backdropFilter: "blur",
-          borderRadius: "10px",
           borderBottom:"1px solid #4F76AE",
        
           mt:'3rem'

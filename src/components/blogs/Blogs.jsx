@@ -6,7 +6,9 @@ import Appbar from '../navbar/Appbar';
 
 import SearchIcon from '@mui/icons-material/Search';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import MouseIcon from '@mui/icons-material/Mouse';
 import { Typewriter } from 'react-simple-typewriter'
+import MouseScroll from '../MouseScroll';
 
 
 const Blogs = () => {
@@ -20,7 +22,7 @@ const Blogs = () => {
   const renderCard= (card, index)=>{
   
     return(
-      <Card sx={{ maxWidth: 340, background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '20px', mb:'25vh', mt:'10vh' }}>
+      <Card sx={{ maxWidth: 340, background: ' linear-gradient(92.66deg, rgba(89, 88, 102, 0.175) 0.6%, rgba(89, 88, 102, 0.1) 99.86%)', backdropFilter: 'blur(50px)', borderRadius: '20px', mb:'20vh', mt:'10vh', height:'421px' }}>
       <CardMedia
         component="img"
         height='200'
@@ -29,18 +31,18 @@ const Blogs = () => {
         
       />
       <CardContent>
-      <Typography gutterBottom variant="span" sx={{ color: '#FCAF17' }}>
+      <Typography gutterBottom variant="span" sx={{ color: '#FCAF17', fontSize:'15px', fontWeight:'600' }}>
                     {card.title}
                   </Typography>
-                  <Typography gutterBottom variant="h5" sx={{ color: '#FFFFFF' }}>
+                  <Typography gutterBottom variant="h5" sx={{ color: '#FFFFFF',fontSize:'17px', fontWeight:'500' }}>
                     {card.text}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#4F76AE' }}>
+                  <Typography variant="body2" sx={{ color: '#4F76AE', fontSize:'13px', fontWeight:'500' }}>
                     {card.desc}
                   </Typography>
                   <CardActions>
                     <RemoveRedEyeIcon sx={{ color: '#FCAF17' }} />
-                    <Button size="small" sx={{ color: '#FCAF17' }}>100 reads</Button>
+                    <Button size="small" sx={{ color: '#FCAF17',fontSize:'14px', fontWeight:'500' }}>100 reads</Button>
                   </CardActions>
       </CardContent>
       
@@ -54,8 +56,7 @@ const Blogs = () => {
            <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
             {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/>
             <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
-
-
+  <MouseScroll/>
       <Box sx={{ padding: "50px 100px" }}>
         <Typography variant='h4'sx={{  p:'1rem 0rem'}} > Latest Blogs !!</Typography>
 

@@ -27,8 +27,8 @@ const Tab2 = () => {
           minWidth: "35%",
           borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
-          borderRadius: "10px",
           mr: 2,
+          
         }}
       >
         <InputLabel
@@ -61,7 +61,7 @@ const Tab2 = () => {
           minWidth: "35%",
           borderBottom:"1px solid #4F76AE",
           backdropFilter: "blur",
-          borderRadius: "10px",
+          
         }}
       >
         <InputLabel
@@ -119,7 +119,7 @@ const Tab2 = () => {
           <MenuItem value={30}>ERP Software</MenuItem>
         </Select>
       </FormControl> 
-      <Grid container sx={{ maxWidth: "100%",mt:'3rem' }}>
+      <Grid container sx={{ maxWidth: "100%",mt:'3rem' ,ml:"0"}}>
         <Grid
           item
           xs={3}
@@ -132,7 +132,7 @@ const Tab2 = () => {
             pb: 1,
           }}
         >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Name" inputProps={ariaLabel} />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'100%'   }} placeholder="Name" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
@@ -146,7 +146,7 @@ const Tab2 = () => {
             pb: 1,
           }}
         >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Email" inputProps={ariaLabel} />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'100%'   }} placeholder="Email" inputProps={ariaLabel} />
         </Grid>
         <Grid
           item
@@ -159,7 +159,7 @@ const Tab2 = () => {
             pb: 1,
           }}
         >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Phone" inputProps={ariaLabel} />
+          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'100%'   }} placeholder="Phone" inputProps={ariaLabel} />
         </Grid>
       </Grid>
       <Box
@@ -173,7 +173,7 @@ const Tab2 = () => {
           mt: 2,
         }}
       >
-        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'80%'  }} placeholder="Project Description" inputProps={ariaLabel} />
+        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'83%'  }} placeholder="Project Description" inputProps={ariaLabel} />
       </Box>
       <Box
         sx={{

@@ -72,6 +72,7 @@ function Services() {
   ]  
   return(
    <Box sx={{margin:'7rem'}}>
+      {/* <Box component="img" src="/img/serviceVector.png" sx={{ position: 'absolute', left: '0', top: '0', zIndex:'1' }} /> */}
     <Typography variant="h5" sx={{
           fontWeight: '400',
           fontSize: '29px',
@@ -109,7 +110,7 @@ function Services() {
              <Box  sx={{ mt: "10px", mt: '20px', minWidth: '334px', minHeight: '390px' }}>
              <Box >
             <Card
-             sx={{ minWidth: '334px', background: "#0A254D", borderRadius: "5px", color: "#FFFFFF", height: '390px', position: 'relative', zIndex: '3' }}
+             sx={{ minWidth: '334px', background: "#0A254D", borderRadius: "5px", color: "#FFFFFF", height: '390px', position: 'absolute', zIndex: '5' }}
             >
               <Box sx={{
                   background: "#FCAF17",
@@ -135,7 +136,7 @@ function Services() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" sx={{ color:"#FCAF17", mt: '20px', fontWeight: '500', fontSize: '15px' }}>
+                <Button size="small" sx={{ color:"#FCAF17", mt: '20px', fontWeight: '500', fontSize: '15px', cursor: 'pointer' }}>
                   Explore More
                   <TrendingFlatIcon />
                 </Button>

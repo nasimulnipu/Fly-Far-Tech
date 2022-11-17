@@ -15,7 +15,7 @@ const Appbar = () => {
   }
   return (
     <Box>
-      <AppBar component="nav" position="relative"  sx={{ backgroundColor: "rgb(14, 13, 38)", padding: "0px 80px"}}>
+      <AppBar component="nav" position="relative"  sx={{ backgroundColor: "transparent", padding: "0px 80px", zIndex:'2'}}>
         <Toolbar>
           <Link href='/' sx={{
             marginTop: "20px",

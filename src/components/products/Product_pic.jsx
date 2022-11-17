@@ -1,5 +1,8 @@
 import { Box, ImageList, ImageListItem } from '@mui/material'
-import React from 'react'
+import React from 'react';
+import "./product.css";
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+
 
 const itemData = [
     {
@@ -46,8 +49,17 @@ const Product_pic = () => {
      }} 
      >
       {itemData.map((image,index)=>(
-       <ImageListItem key={index}>
-         <img src={image.img} alt={image.title}/>
+       <ImageListItem className='imgItem' key={index}>
+        <img src={image.img} alt={image.title} />
+        <div className='desc'>
+           <h3>UI/UX Design</h3>
+           <h3>Foodie Restrurent</h3>
+           <span>Lorem ipsum dolor sit amet,afafsafa aconsectetur adipiscing elit.</span>
+           <a href='#'>
+           <ArrowCircleRightIcon sx={{backgroundColor: '#FCAF17', borderRadius:'22px' }} fontSize='large'/>
+           </a>
+           
+        </div>
        </ImageListItem>
        
       ))}

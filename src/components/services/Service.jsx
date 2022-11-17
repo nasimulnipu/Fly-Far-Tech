@@ -18,7 +18,9 @@ import {
   import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Appbar from "../navbar/Appbar";
 import Footer from "../footer/Footer";
+import MouseIcon from '@mui/icons-material/Mouse';
 import { Typewriter } from 'react-simple-typewriter'
+import MouseScroll from "../MouseScroll";
 
 
 const Service = () => {
@@ -26,6 +28,7 @@ const Service = () => {
   return (
    <Box >
     <Appbar/>
+    <MouseScroll/>
            <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
             {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/>
             <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}

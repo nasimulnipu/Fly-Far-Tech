@@ -75,7 +75,7 @@ const Footer = () => {
     </Box>
 
    </Box>
-   <hr style={{margin: '40px'}}  color= "#FCAF17" />
+   <hr style={{marginTop:'4rem', marginBottom:'2rem'}}  color= "#FCAF17" />
    <Box sx={{
     display:'flex',
     flexDirection:'row',
