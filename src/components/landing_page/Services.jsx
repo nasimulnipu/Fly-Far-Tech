@@ -125,7 +125,7 @@ function Services() {
           fontStyle: 'normal',
           color: '#FFFFFF',
           mb:'1rem'
-        }}>We do everything!!</Typography>
+        }}>We can do everything!!</Typography>
         <Typography variant="span" sx={{
           fontWeight: '400',
           fontSize: '18px',
