@@ -42,20 +42,27 @@ body{
     display: none;
     transform: scale(1.4);
 } */
-.link-grow{
+/* .link-grow{
     transform: scale(2.2);
     
     z-index: -10;
-}
+} */
 
 .header{
-    width: 70%;
+    width: 80%;
     height: 70vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
-    margin: 4rem auto;  
+    justify-content: flex-start;
+    margin-top: 10rem;  
+    margin-left: 9rem;
+    
+}
+.header h2{
+    font-size: 1.5rem; 
+     
+    color: #ffffff
 }
 
 .title{
@@ -63,23 +70,29 @@ body{
     min-height: 60vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    margin: 0rem auto;
+    align-items: flex-start;
+   justify-content: space-between;
+    margin-top: 3rem;
     font-size:6rem;
     z-index: 11;
 }
 
 
 .title a{
-    height: 20vh;
+    /* height: 20vh;
     text-decoration: none;
     margin: 0rem 1rem;
     font-weight: 600;
     overflow: hidden;
     color: transparent;
     transition: color 0.3s, -webkit-text-stroke 0.3s;
-    -webkit-text-stroke: 0.8px #ffffff; 
+    -webkit-text-stroke: 0.8px #ffffff;  */
+
+    width: 50%;
+    text-decoration: none;
+    color: transparent;
+    transition: color 0.3s, -webkit-text-stroke 0.3s;
+    -webkit-text-stroke: 0.8px #ffffff;
 }
 
 .title a:hover{
@@ -87,32 +100,31 @@ body{
     -webkit-text-stroke: 1px transparent;  
 }
 
-.title-1{
-    display: flex;
-    flex-direction: column;
+/* .title-1{
+    margin: 0 20px;
     margin-bottom: 2.6rem;
     width: 26rem;
-}
+} */
 
-.title-1 p{
+/* .title-1 p{
     font-size: 1.5rem; 
     margin: 0 .8rem .8rem .8rem ;  
     color: #ffffff
-}
+} */
 
-.title-link-grow{
+/* .title-link-grow{
     border: none;
     transform: scale(11);
     background-size: cover;
     z-index: 2;
     overflow: hidden;
-}
+} */
 
 .headerBlur{
     position: absolute;
     right: 0;
 }
 
-.title-2, .title-3 {
-    width: 26rem;
+.title-2 {
+    margin-left: 8rem;
 }

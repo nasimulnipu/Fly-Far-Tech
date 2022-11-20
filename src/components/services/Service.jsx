@@ -75,8 +75,8 @@ const Service = () => {
             gap: 4,
             
         }}>
-          <NavigateBeforeIcon/>
-          <NavigateNextIcon/>
+          {/* <NavigateBeforeIcon/>
+          <NavigateNextIcon/> */}
         </Box>
         <Grid container spacing={4} sx={{ mt: "2rem", mr:'2rem'}}>
           <Grid item xs={3}>

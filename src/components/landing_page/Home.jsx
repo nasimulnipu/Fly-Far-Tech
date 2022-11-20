@@ -20,7 +20,7 @@ const Home = () => {
     <Box>
     <Appbar/>
     <MouseScroll/>
-    {/* <Banner/> */}
+    <Banner/>
     <Services/>
     <Portfolio/>
     <Testimonial/>

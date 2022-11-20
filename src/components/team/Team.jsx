@@ -23,7 +23,7 @@ const Team = () => {
         <Typography variant='h4' sx={{ pb:'1rem'}}>Our Energetic Team !!
           </Typography>
         <Typography variant='span'sx={{ color:'#4F76AE'}}>In any industry where the peoples behind a company are as important as the company itself. we love to show off the awesome people who are responsible for keeping our buisness booming</Typography>
-        </Box>import MouseScroll from './../MouseScroll';
+        </Box>
 
 
       

@@ -16,14 +16,16 @@ import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import mobLogo from "./lcon/mobLogo.png";
 import penLogo from "./lcon/penLogo.png";
 import comLogo from "./lcon/comLogo.png";
 import cLogo from "./lcon/cLogo.png"
+import "./service.css";
 
 function Services() {
   const data =[
@@ -55,7 +57,7 @@ function Services() {
       id:5,
       servicename: 'Web Development',
       serviceDesc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sed fugit quisquam in harum quasi quibusdam, amet tempora sint officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, tenetur.',
-      logo: mobLogo
+      logo: comLogo
     },
     {
       id:6,
@@ -67,9 +69,44 @@ function Services() {
       id:7,
       servicename: 'Mobile App Development',
       serviceDesc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sed fugit quisquam in harum quasi quibusdam, amet tempora sint officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, tenetur.',
-      logo: mobLogo
+      logo: cLogo
     },
   ]  
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1700,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
   return(
    <Box sx={{margin:'7rem'}}>
       {/* <Box component="img" src="/img/serviceVector.png" sx={{ position: 'absolute', left: '0', top: '0', zIndex:'1' }} /> */}
@@ -96,21 +133,12 @@ function Services() {
         }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, iste!
         </Typography>
-         <Swiper 
-           
-           spaceBetween={20}
-         slidesPerView={4}
-      
-         
-         >
+        
+        <Slider  {...settings}>
         {data.map(service=>(
-
-          <SwiperSlide key={service.id} className="slide">
-            
-             <Box  sx={{ mt: "10px", mt: '20px', minWidth: '334px', minHeight: '390px' }}>
-             <Box >
+           <Box sx={{ mt: "10px",  height: '390px'}} >
             <Card
-             sx={{ minWidth: '334px', background: "#0A254D", borderRadius: "5px", color: "#FFFFFF", height: '390px', position: 'absolute', zIndex: '5' }}
+             sx={{ width: '300px', background: "#0A254D", borderRadius: "5px", color: "#FFFFFF", height: '390px',position:"absolute", zIndex: '5' }}
             >
               <Box sx={{
                   background: "#FCAF17",
@@ -144,10 +172,12 @@ function Services() {
             </Card>
           </Box>
 
-             </Box>
-          </SwiperSlide>
+          
         ))}
-      </Swiper>
+      </Slider>
+
+        
+     
    </Box>
   );
   // return (

@@ -12,7 +12,7 @@ const Portfolio = () => {
   return (
     <Box >
   
-    <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/>
+    {/* <Box component= "img" src="/img/topVector.png" sx={{position:'absolute', left:'0', top:'0'}}/> */}
     {/* <Box component= "img" src="/img/middleVector.png" sx={{position:'absolute'}}/> */}
     {/* <Box component= "img" src="/img/rightVector.png" sx={{position:'absolute', right:'0'}}/> */}
 

@@ -7,16 +7,25 @@ import {
   MenuItem,
   Select,
   Grid,
-  TextField,
   Button,
 } from "@mui/material";
 
 const Tab2 = () => {
   const ariaLabel = {'aria-label' : 'input'}
-  const [catagories, setcatagories] = React.useState("");
+  const [catagories1, setcatagories1] = React.useState("");
 
   const handleChange1 = (event) => {
-    setcatagories(event.target.value);
+    setcatagories1(event.target.value);
+  };
+  const [catagories2, setcatagories2] = React.useState("");
+
+  const handleChange2 = (event) => {
+    setcatagories2(event.target.value);
+  };
+  const [catagories3, setcatagories3] = React.useState("");
+
+  const handleChange3 = (event) => {
+    setcatagories3(event.target.value);
   };
   return (
      <Box>
@@ -39,11 +48,11 @@ const Tab2 = () => {
           What type of project you want to be developed?
         </InputLabel>                                                         
         <Select
-          // labelId="demo-simple-select-standard-label"
-          // id="demo-simple-select-standard"
-          value={catagories}
+       
+          value={catagories1}
           onChange={handleChange1}
           label="Catagories"
+          sx={{color:"#ffffff"}}
           
         >
           <MenuItem value="">
@@ -72,11 +81,11 @@ const Tab2 = () => {
           Expected Project Delivery Time Frame ?
         </InputLabel>
         <Select
-          // labelId="demo-simple-select-standard-label"
-          // id="demo-simple-select-standard"
-          value={catagories}
-          onChange={handleChange1}
+        
+          value={catagories2}
+          onChange={handleChange2}
           label="Catagories"
+          sx={{color:"#ffffff"}}
         >
           <MenuItem value="">
             <em>None</em>
@@ -105,11 +114,11 @@ const Tab2 = () => {
           What is your approximate budget look like ?
         </InputLabel>
         <Select
-          // labelId="demo-simple-select-standard-label"
-          // id="demo-simple-select-standard"
-          value={catagories}
-          onChange={handleChange1}
+          
+          value={catagories3}
+          onChange={handleChange3}
           label="Catagories"
+          sx={{color:"#ffffff"}}
         >
           <MenuItem value="">
             <em>None</em>

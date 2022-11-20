@@ -31,7 +31,7 @@ const Tab1 = () => {
         }}
       >
         <InputLabel
-          sx={{ color:'#C7C7C7', ml:'8px'}}
+          sx={{ color:'#C7C7C7', ml:'9px'}}
           id="demo-simple-select-standard-label"
         >
           
@@ -43,6 +43,7 @@ const Tab1 = () => {
           value={catagories}
           onChange={handleChange}
           label="Catagories"
+          sx={{color:"#ffffff"}}
         >
           <MenuItem value="">
             <em>None</em>
