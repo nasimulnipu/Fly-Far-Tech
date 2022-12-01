@@ -1,56 +1,110 @@
 import React from "react";
 import { Box, Grid, TextField, Button } from "@mui/material";
-import Input from '@mui/material/Input';
+import Input from "@mui/material/Input";
+import Contact from "./Contact";
+import { Container } from "@mui/system";
+import { useState } from "react";
 
 const Tab3 = () => {
-  const ariaLabel = {'aria-label' : 'input'}
+  const ariaLabel = { "aria-label": "input" };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleForm = (e) => {
+    console.log(name, email, phone, subject, description);
+    e.preventDefault();
+  };
+
   return (
-    <Box>
-      <Grid container sx={{ maxWidth: "100%" }} >
-        <Grid
-          item
-          xs={3}
-          
-        >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"  }} placeholder="Name" inputProps={ariaLabel} />
+    <Box container maxWidth={"xl"} style={{ marginTop: "40px" }}>
+      <form onSubmit={handleForm}>
+        <Grid container spacing={4}>
+          <Grid item md={4}>
+            <Input
+              required
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Name"
+              inputProps={ariaLabel}
+            />
+          </Grid>
+          <Grid item md={4}>
+            <Input
+              required
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              inputProps={ariaLabel}
+            />
+          </Grid>
+
+          <Grid item md={4}>
+            <Input
+              required
+              onChange={(e) => setPhone(e.target.value)}
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              placeholder="Phone"
+              inputProps={ariaLabel}
+            />
+          </Grid>
+          <Grid item md={7}>
+            <Input
+              required
+              onChange={(e) => setSubject(e.target.value)}
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              placeholder="Subject"
+              inputProps={ariaLabel}
+            />
+          </Grid>
+          <Grid item md={12}>
+            <Input
+              required
+              onChange={(e) => setDescription(e.target.value)}
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              placeholder="Project Description"
+              inputProps={ariaLabel}
+            />
+          </Grid>
         </Grid>
-        <Grid
-          item
-          xs={3}
-         
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
         >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE"}} placeholder="Email" inputProps={ariaLabel} />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-      
-        >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE" }} placeholder="Phone" inputProps={ariaLabel} />
-        </Grid>
-      </Grid>
-      <Box
-      sx={{ mt:'3rem'}}
-      >
-       <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'80%'    }} placeholder="Subject" inputProps={ariaLabel} />
-      </Box>
-      <Box
-       sx={{ mt:'3rem'}}
-      >
-        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'80%'  }} placeholder="Project Description" inputProps={ariaLabel} />
-      </Box>
-      <Box
-        sx={{
-          maxWidth: "76%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-        }}
-      >
-        <Button variant="text" sx={{ color: "#FCAF17", mt:"2rem" }}>
-          Submit Query
-        </Button>
-      </Box>
+          <Button
+            variant="text"
+            type="submit"
+            sx={{ color: "#FCAF17", mt: "2rem", textTransform: "capitalize" }}
+          >
+            Submit Query
+          </Button>
+        </Box>
+      </form>
     </Box>
   );
 };

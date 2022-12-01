@@ -1,0 +1,14 @@
+.tabBox1 {
+  transition: 0.5s all;
+}
+
+.tabBox1:hover {
+  background-color: #fcaf17;
+  cursor: pointer;
+}
+
+.tabBox1:hover p {
+  color: #000 !important;
+  transition: 0.5s ease-in-out;
+  padding-left: 3px;
+}
