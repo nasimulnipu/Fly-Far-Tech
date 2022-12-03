@@ -19,12 +19,12 @@ import { useState } from "react";
 
 const style = {
   position: "absolute",
-  top: "60%",
+  top: "65%",
   left: "50%",
-  transform: "translate(-80%, -50%)",
+  transform: "translate(-82%, -50%)",
   width: 800,
   bgcolor: "background.paper",
-  border: "0px !important",
+  border: "1px !important",
   boxShadow: 0,
   p: 3,
   borderRadius: "10px",
@@ -39,8 +39,13 @@ const Tab1 = () => {
 
   // modal
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const [service, setService] = useState("");
   const [name, setName] = useState("");
@@ -62,7 +67,12 @@ const Tab1 = () => {
     <Box container maxWidth={"xxl"} style={{ marginTop: "50px" }}>
       <form onSubmit={contactDataHandle}>
         <div>
-          <Box style={{ width: "50%" }}>
+          <Box
+            width={{
+              xs: "100%",
+              md: "50%",
+            }}
+          >
             <Typography
               onClick={handleOpen}
               style={{
@@ -76,13 +86,12 @@ const Tab1 = () => {
               {service ? service : "    Which Product we can help you ?"}
             </Typography>
           </Box>
-
           <Modal
             open={open}
             onClose={handleClose}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+            className="modal1"
           >
             <Box sx={style}>
               <Grid container spacing={4}>
@@ -291,6 +300,8 @@ const Tab1 = () => {
           <Grid
             item
             md={4}
+            sm={6}
+            xs={12}
             sx={{
               backgroundColor: "transparent",
               backdropFilter: "blur",
@@ -312,6 +323,8 @@ const Tab1 = () => {
           <Grid
             item
             md={4}
+            sm={6}
+            xs={12}
             sx={{
               backgroundColor: "transparent",
               backdropFilter: "blur",
@@ -334,6 +347,8 @@ const Tab1 = () => {
           <Grid
             item
             md={4}
+            sm={6}
+            xs={12}
             sx={{
               backgroundColor: "transparent",
               backdropFilter: "blur",
