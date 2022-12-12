@@ -1,5 +1,7 @@
 import React from "react";
-import Input from '@mui/material/Input';
+import Input from "@mui/material/Input";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import { SxProps } from "@mui/system";
 import {
   Box,
   FormControl,
@@ -7,195 +9,777 @@ import {
   MenuItem,
   Select,
   Grid,
+  TextField,
   Button,
+  Typography,
 } from "@mui/material";
+import Modal from "@mui/material/Modal";
+import "./Tab1.css";
+import { useState } from "react";
+
+const style = {
+  position: "absolute",
+  top: "65%",
+  left: "50%",
+  transform: "translate(-82%, -50%)",
+  width: 800,
+  bgcolor: "background.paper",
+  border: "1px !important",
+  boxShadow: 0,
+  p: 3,
+  borderRadius: "10px",
+};
+
+const style2 = {
+  position: "absolute",
+  top: "60%",
+  left: "71%",
+  transform: "translate(-50%, -50%)",
+  width: 560,
+  bgcolor: "background.paper",
+  border: "1px !important",
+  boxShadow: 0,
+  p: 3,
+  borderRadius: "10px",
+};
+
+const style3 = {
+  position: "absolute",
+  top: "69%",
+  left: "50%",
+  transform: "translate(-82%, -50%)",
+  width: 800,
+  bgcolor: "background.paper",
+  border: "1px !important",
+  boxShadow: 0,
+  p: 3,
+  borderRadius: "10px",
+};
 
 const Tab2 = () => {
-  const ariaLabel = {'aria-label' : 'input'}
-  const [catagories1, setcatagories1] = React.useState("");
-
-  const handleChange1 = (event) => {
-    setcatagories1(event.target.value);
+  const ariaLabel = { "aria-label": "input" };
+  const [catagories, setcatagories] = React.useState("");
+  const handleChange = (event) => {
+    setcatagories(event.target.value);
   };
-  const [catagories2, setcatagories2] = React.useState("");
 
-  const handleChange2 = (event) => {
-    setcatagories2(event.target.value);
+  // modal 1 api solution
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
   };
-  const [catagories3, setcatagories3] = React.useState("");
 
-  const handleChange3 = (event) => {
-    setcatagories3(event.target.value);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const [service, setService] = useState("");
+  const handleData = (value) => {
+    setService(value);
+    handleClose();
+  };
+
+  // modal 2 project delivery
+  const [service2, setService2] = useState("");
+  const [open2, setOpen2] = React.useState(false);
+  const handleOpen2 = () => {
+    setOpen2(true);
+  };
+
+  const handleClose2 = () => {
+    setOpen2(false);
+  };
+
+  const handleData2 = (value) => {
+    setService2(value);
+    handleClose2();
+  };
+
+  // modal 3 project delivery
+  const [service3, setService3] = useState("");
+  const [open3, setOpen3] = React.useState(false);
+  const handleOpen3 = () => {
+    setOpen3(true);
+  };
+
+  const handleClose3 = () => {
+    setOpen3(false);
+  };
+  const handleData3 = (value) => {
+    setService3(value);
+    handleClose3();
+  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [description, setDiscription] = useState("");
+  const contactDataHandle = (e) => {
+    console.log(service, name, email, phone, description);
+    e.preventDefault();
   };
   return (
-     <Box>
-      <FormControl
-        variant="standard"
-        sx={{
-          mb: 1,
-          minWidth: "35%",
-          borderBottom:"1px solid #4F76AE",
-          backdropFilter: "blur",
-          mr: 2,
-          
-        }}
-      >
-        <InputLabel
-          sx={{ color:'#C7C7C7', pl: 2 }}
-          id="demo-simple-select-standard-label"
-        >
-          
-          What type of project you want to be developed?
-        </InputLabel>                                                         
-        <Select
-       
-          value={catagories1}
-          onChange={handleChange1}
-          label="Catagories"
-          sx={{color:"#ffffff"}}
-          
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Web Development</MenuItem>
-          <MenuItem value={20}>Mobile App Development</MenuItem>
-          <MenuItem value={30}>ERP Software</MenuItem>
-        </Select>
-      </FormControl>
-       <FormControl
-        variant="standard"
-        sx={{
-          mb: 1,
-          minWidth: "35%",
-          borderBottom:"1px solid #4F76AE",
-          backdropFilter: "blur",
-          
-        }}
-      >
-        <InputLabel
-          sx={{ color:'#C7C7C7', pl: 2 }}
-          id="demo-simple-select-standard-label"
-        >
-          
-          Expected Project Delivery Time Frame ?
-        </InputLabel>
-        <Select
-        
-          value={catagories2}
-          onChange={handleChange2}
-          label="Catagories"
-          sx={{color:"#ffffff"}}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Web Development</MenuItem>
-          <MenuItem value={20}>Mobile App Development</MenuItem>
-          <MenuItem value={30}>ERP Software</MenuItem>
-        </Select>
-      </FormControl>
+    <Box container maxWidth={"xxl"}>
+      <form onSubmit={contactDataHandle}>
+        <Grid container spacing={4} sx={{ mt: "1rem" }}>
+          <Grid
+            item
+            md={6}
+            sm={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+            }}
+          >
+            <Box>
+              <Box>
+                <Typography
+                  onClick={handleOpen}
+                  style={{
+                    cursor: "pointer",
+                    paddingBottom: "6px",
+                    borderBottom: "1px solid #4F76AE",
+                    fontSize: "16px",
+                    color: "#8A8A8A",
+                  }}
+                >
+                  {service ? service : "    Which Product we can help you ?"}
+                </Typography>
+              </Box>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                className="modal1"
+              >
+                <Box sx={style}>
+                  <Grid container spacing={4}>
+                    <Grid item md={4}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData("Web Application")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          Web Application
+                        </Typography>
+                        <Typography
+                          style={{
+                            color: "#8A8A8A",
+                            fontSize: "12px",
+                            fontFamily: "poppins",
+                            fontWeight: "400",
+                          }}
+                        >
+                          B2B, B2C, Travel, Branding All kind Web Applications
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={4}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
 
-      <FormControl
-        variant="standard"
-        sx={{
-          mb: 1,
-          minWidth: "35%",
-          borderBottom:"1px solid #4F76AE",
-          backdropFilter: "blur",
-         
-        }}
-      >
-        <InputLabel
-          sx={{ color:'#C7C7C7', pl: 2 }}
-          id="demo-simple-select-standard-label"
-        >
-          
-          What is your approximate budget look like ?
-        </InputLabel>
-        <Select
-          
-          value={catagories3}
-          onChange={handleChange3}
-          label="Catagories"
-          sx={{color:"#ffffff"}}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Web Development</MenuItem>
-          <MenuItem value={20}>Mobile App Development</MenuItem>
-          <MenuItem value={30}>ERP Software</MenuItem>
-        </Select>
-      </FormControl> 
-      <Grid container sx={{ maxWidth: "100%",mt:'3rem' ,ml:"0"}}>
-        <Grid
-          item
-          xs={3}
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData("Mobile Applications")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          Mobile Applications
+                        </Typography>
+                        <Typography
+                          style={{
+                            color: "#8A8A8A",
+                            fontSize: "12px",
+                            fontFamily: "poppins",
+                            fontWeight: "400",
+                          }}
+                        >
+                          B2B, B2C, Travel, Branding All kind Web Applications
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={4}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData("ERP Applications")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          ERP Applications
+                        </Typography>
+                        <Typography
+                          style={{
+                            color: "#8A8A8A",
+                            fontSize: "12px",
+                            fontFamily: "poppins",
+                            fontWeight: "400",
+                          }}
+                        >
+                          B2B, B2C, Travel, Branding All kind Web Applications
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={4}>
+                      <Box
+                        style={{
+                          padding: "10px 10px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData("Management Software")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          Management Software
+                        </Typography>
+                        <Typography
+                          style={{
+                            color: "#8A8A8A",
+                            fontSize: "12px",
+                            fontFamily: "poppins",
+                            fontWeight: "400",
+                          }}
+                        >
+                          B2B, B2C, Travel, Branding All kind Web Applications
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={4}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData("Travel API Solutions")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          Travel API Solutions
+                        </Typography>
+                        <Typography
+                          style={{
+                            color: "#8A8A8A",
+                            fontSize: "12px",
+                            fontFamily: "poppins",
+                            fontWeight: "400",
+                          }}
+                        >
+                          B2B, B2C, Travel, Branding All kind Web Applications
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={4}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData(" UI / UX Design")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          UI / UX Design
+                        </Typography>
+                        <Typography
+                          style={{
+                            color: "#8A8A8A",
+                            fontSize: "12px",
+                            fontFamily: "poppins",
+                            fontWeight: "400",
+                          }}
+                        >
+                          B2B, B2C, Travel, Branding All kind Web Applications
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Modal>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            md={6}
+            sm={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+            }}
+          >
+            <Box>
+              <Box>
+                <Typography
+                  onClick={handleOpen2}
+                  style={{
+                    cursor: "pointer",
+                    paddingBottom: "6px",
+                    borderBottom: "1px solid #4F76AE",
+                    fontSize: "16px",
+                    color: "#8A8A8A",
+                  }}
+                >
+                  {service2
+                    ? service2
+                    : "    Expected Project Delivery Time Frame ?"}
+                </Typography>
+              </Box>
+              <Modal
+                open={open2}
+                onClose={handleClose2}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                className="modal1"
+              >
+                <Box sx={style2}>
+                  <Grid container spacing={4}>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData2("1-3 Weeks")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          1-3 Weeks
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData2("1 Month")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          1 Month
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData2(" 1-3 Month")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          1-3 Month
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "10px 10px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData2("   3+ Month")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          3+ Month
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Modal>
+            </Box>
+          </Grid>
+
+          <Grid
+            item
+            md={6}
+            sm={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+            }}
+          >
+            <Box>
+              <Box>
+                <Typography
+                  onClick={handleOpen3}
+                  style={{
+                    cursor: "pointer",
+                    paddingBottom: "6px",
+                    borderBottom: "1px solid #4F76AE",
+                    fontSize: "16px",
+                    color: "#8A8A8A",
+                  }}
+                >
+                  {service3
+                    ? service3
+                    : "    What is your approximate budget look like ?"}
+                </Typography>
+              </Box>
+              <Modal
+                open={open3}
+                onClose={handleClose3}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                className="modal1"
+              >
+                <Box sx={style3}>
+                  <Grid container spacing={4}>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData3(" $1000-$3000")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          $1000-$3000
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData3("$3000-$5000")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          $3000-$5000
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "15px 15px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData3("$5000-$10000")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          $5000-$10000
+                        </Typography>
+                      </Box>
+                    </Grid>
+                    <Grid item md={6}>
+                      <Box
+                        style={{
+                          padding: "10px 10px",
+
+                          borderRadius: "5px",
+                        }}
+                        className="tabBox1"
+                        onClick={() => handleData3("$10000")}
+                      >
+                        <Typography
+                          style={{
+                            color: "#4F76AE",
+                            fontSize: "18px",
+                            fontFamily: "poppins",
+                            fontWeight: "600",
+                            paddingBottom: "5px",
+                          }}
+                        >
+                          $10000
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Modal>
+            </Box>
+          </Grid>
+
+          <Grid
+            item
+            md={6}
+            sm={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+            }}
+            display={{
+              xs: "none",
+              md: "block",
+            }}
+          ></Grid>
+
+          <Grid
+            item
+            md={4}
+            sm={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+              borderRadius: "10px",
+            }}
+          >
+            <Input
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              type="email"
+              placeholder="Email"
+              inputProps={ariaLabel}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Grid>
+          <Grid
+            item
+            md={4}
+            sm={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+              borderRadius: "10px",
+              pl: 2,
+              pb: 1,
+            }}
+          >
+            <Input
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              type="text"
+              placeholder="Phone"
+              inputProps={ariaLabel}
+              required
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </Grid>
+          <Grid
+            item
+            md={4}
+            sm={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+              borderRadius: "10px",
+              pl: 2,
+              pb: 1,
+            }}
+          >
+            <Input
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              type="text"
+              placeholder="Phone"
+              inputProps={ariaLabel}
+              required
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </Grid>
+          <Grid
+            item
+            md={6}
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+              borderRadius: "10px",
+              pb: 1,
+              pt: 2,
+            }}
+            className="input-file1"
+          >
+            <Input
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              type="file"
+              placeholder="Tell us about your idea"
+              inputProps={ariaLabel}
+              onChange={(e) => setDiscription(e.target.value)}
+            />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sx={{
+              backgroundColor: "transparent",
+              backdropFilter: "blur",
+              borderRadius: "10px",
+              pb: 1,
+              pt: 2,
+            }}
+          >
+            <Input
+              sx={{
+                color: "#C7C7C7",
+                borderBottom: "1px solid #4F76AE",
+                width: "100%",
+              }}
+              type="text"
+              placeholder="Tell us about your idea"
+              inputProps={ariaLabel}
+              onChange={(e) => setDiscription(e.target.value)}
+            />
+          </Grid>
+        </Grid>
+
+        <Box
           sx={{
-            backgroundColor: "transparent",
-            backdropFilter: "blur",
-            borderRadius: "10px",
-            
-            pl: 2,
-            pb: 1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+            mt: "3rem",
           }}
         >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'100%'   }} placeholder="Name" inputProps={ariaLabel} />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          sx={{
-            backgroundColor: "transparent",
-            backdropFilter: "blur",
-            borderRadius: "10px",
-            
-            pl: 2,
-            pb: 1,
-          }}
-        >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'100%'   }} placeholder="Email" inputProps={ariaLabel} />
-        </Grid>
-        <Grid
-          item
-          xs={3}
-          sx={{
-            backgroundColor: "transparent",
-            backdropFilter: "blur",
-            borderRadius: "10px",
-            pl: 2,
-            pb: 1,
-          }}
-        >
-          <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE",width:'100%'   }} placeholder="Phone" inputProps={ariaLabel} />
-        </Grid>
-      </Grid>
-      <Box
-        sx={{
-          maxWidth: "90%",
-          backgroundColor: "transparent",
-          backdropFilter: "blur",
-          borderRadius: "10px",
-          pl: 2,
-          pb: 1,
-          mt: 2,
-        }}
-      >
-        <Input sx={{color:'#C7C7C7', borderBottom:"1px solid #4F76AE", width:'83%'  }} placeholder="Project Description" inputProps={ariaLabel} />
-      </Box>
-      <Box
-        sx={{
-          maxWidth: "76%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-        }}
-      >
-        <Button variant="text" sx={{ color: "#FCAF17", mt: 2 }}>
-          Submit Query
-        </Button>
-      </Box>
+          <Button
+            type="submit"
+            variant="text"
+            sx={{ color: "#FCAF17", mt: 2, textTransform: "capitalize" }}
+          >
+            Submit Query
+          </Button>
+        </Box>
+      </form>
     </Box>
   );
 };

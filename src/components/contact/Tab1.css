@@ -1,0 +1,34 @@
+.tabBox1 {
+  transition: 0.5s all;
+}
+
+.tabBox1:hover {
+  background-color: #fcaf17;
+  cursor: pointer;
+}
+
+.tabBox1:hover p {
+  color: #000 !important;
+  transition: 0.5s ease-in-out;
+  padding-left: 3px;
+}
+
+.modal1,
+.css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop {
+  background-color: transparent !important;
+}
+
+/* body {
+  height: 100vh;
+  overflow-y: hidden;
+} */
+
+.input-file1 input[type="file"]::file-selector-button {
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: transparent;
+  transition: 1s;
+  border: 0px;
+  color: #fcaf17;
+  cursor: pointer;
+}
